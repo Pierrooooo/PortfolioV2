@@ -62,14 +62,40 @@ window.onscroll = function(){
     // }
 }
 
-
+// BURGER MENU
 var burgerMenu = document.getElementById("burger_menu")
 var burgerSpan1 = document.getElementById("burger_span1")
 var burgerSpan2 = document.getElementById("burger_span2")
 var burgerSpan3 = document.getElementById("burger_span3")
+var ul = document.getElementById("ul")
+var header = document.getElementById("header")
+var nav = document.getElementById("nav")
+var a = document.querySelectorAll("#ul li a")
+var h1 = document.querySelector("#nav a h1")
 
 burgerMenu.addEventListener("click", function(){
-    burgerSpan1.style.toggleClass('anim_burger1')
-    burgerSpan2.style.display = 'none'
-    burgerSpan3.style.toggleClass('anim_burger2')
+    burgerSpan1.classList.toggle('anim_burger1')
+    burgerSpan2.classList.toggle('dpnone')
+    burgerSpan3.classList.toggle('anim_burger2')
+    ul.classList.toggle('dpblock')
+    ul.classList.toggle('op1')
+    header.classList.toggle('h_full')
+    nav.classList.toggle('h_full')
+    a.forEach(element => {
+        element.classList.toggle('fz')
+    });
+    h1.classList.toggle("dpnone")
+})
+a.addEventListener("click", function(){
+    burgerSpan1.classList.toggle('anim_burger1')
+    burgerSpan2.classList.toggle('dpnone')
+    burgerSpan3.classList.toggle('anim_burger2')
+    ul.classList.toggle('dpblock')
+    ul.classList.toggle('op1')
+    header.classList.toggle('h_full')
+    nav.classList.toggle('h_full')
+    a.forEach(element => {
+        element.classList.toggle('fz')
+    });
+    h1.classList.toggle("dpnone")
 })

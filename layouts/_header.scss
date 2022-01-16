@@ -15,11 +15,6 @@ z-index: 10000;
         justify-content: space-between;
         align-items: center;
 
-        // @include xl{
-        //     align-items: flex-start;
-        // }
-
-
         a{
             text-decoration: none;
             cursor: none;
@@ -54,7 +49,7 @@ z-index: 10000;
                 transform-origin: left;
                 }
                 &:hover{
-                    animation: hover_red_pink 0.5s forwards;
+                    animation: hover_red_pink 0.5s forwards ;
                 }
                 @keyframes hover_red_pink{
                     from{color: $almost_white;}
@@ -146,7 +141,8 @@ z-index: 10000;
                 border-radius: 2px;
             }
             .anim_burger1{
-                animation: anim_burger_in1 400ms ease-in-out ;
+                animation: anim_burger_in1 400ms ease-in-out forwards;
+                animation-delay: 500ms;
             }
             @keyframes anim_burger_in1 {
                 from{}
@@ -157,18 +153,33 @@ z-index: 10000;
                 to{}
             }
             .anim_burger2{
-                animation: anim_burger_in2 400ms ease-in-out ;
+                animation: anim_burger_in2 400ms ease-in-out forwards;
+                animation-delay: 500ms;
             }
             @keyframes anim_burger_in2 {
                 from{}
-                to{transform: translateY(-5px) rotate(135deg)}
+                to{transform: translateY(-5px) rotate(45deg)}
             }
             @keyframes anim_burger_ou2 {
-                from{transform: translateY(-5px) rotate(135deg)}
+                from{transform: translateY(-5px) rotate(45deg)}
                 to{}
             }
         }
         
     }
 }
-
+.dpblock{
+    display: block;
+}
+.dpnone{
+    display: none;
+}
+.op1{
+    opacity: 1;
+}
+.h_full{
+    height: 100vh;
+}
+.fz{
+    font-size: 2.5rem;
+}

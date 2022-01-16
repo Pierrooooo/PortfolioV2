@@ -145,7 +145,8 @@ header .burger_menu {
     border-radius: 2px;
   }
   header .burger_menu .anim_burger1 {
-    animation: anim_burger_in1 400ms ease-in-out;
+    animation: anim_burger_in1 400ms ease-in-out forwards;
+    animation-delay: 500ms;
   }
   @keyframes anim_burger_in1 {
     to {
@@ -158,18 +159,39 @@ header .burger_menu {
     }
   }
   header .burger_menu .anim_burger2 {
-    animation: anim_burger_in2 400ms ease-in-out;
+    animation: anim_burger_in2 400ms ease-in-out forwards;
+    animation-delay: 500ms;
   }
   @keyframes anim_burger_in2 {
     to {
-      transform: translateY(-5px) rotate(135deg);
+      transform: translateY(-5px) rotate(45deg);
     }
   }
   @keyframes anim_burger_ou2 {
     from {
-      transform: translateY(-5px) rotate(135deg);
+      transform: translateY(-5px) rotate(45deg);
     }
   }
+}
+
+.dpblock {
+  display: block;
+}
+
+.dpnone {
+  display: none;
+}
+
+.op1 {
+  opacity: 1;
+}
+
+.h_full {
+  height: 100vh;
+}
+
+.fz {
+  font-size: 2.5rem;
 }
 
 * {
@@ -186,6 +208,11 @@ html {
   scroll-behavior: smooth;
   background-color: #110F0E;
   overflow-x: hidden;
+}
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
 }
 
 input[type=radio] {
@@ -426,10 +453,16 @@ input[type=radio] {
 }
 .skills_container .skills {
   display: grid;
-  grid-template-columns: repeat(3, 100px) 250px;
-  grid-template-rows: 200px;
+  grid-template-columns: repeat(3, 1fr) 2.5fr;
+  grid-template-rows: 2fr;
   gap: 2rem;
   animation: transi_load 0.75s;
+}
+@media screen and (max-width: 800px) {
+  .skills_container .skills {
+    grid-template-rows: 1fr;
+    margin-top: -50px;
+  }
 }
 .skills_container .skills .logos {
   display: flex;
@@ -445,6 +478,11 @@ input[type=radio] {
   width: 25%;
   transition: 300ms ease-in-out;
   border-radius: 0.5rem;
+}
+@media screen and (max-width: 800px) {
+  .skills_container .skills .logos .logo {
+    background-size: auto 100px;
+  }
 }
 .skills_container .skills .logos .logo:hover {
   width: 100%;
@@ -468,9 +506,14 @@ input[type=radio] {
   background-position: center;
   background-size: auto 200px;
   background-repeat: no-repeat;
-  width: 25%;
+  width: 33%;
   transition: 300ms ease-in-out;
   border-radius: 0.5rem;
+}
+@media screen and (max-width: 800px) {
+  .skills_container .design .logos .logo {
+    background-size: auto 100px;
+  }
 }
 .skills_container .design .logos .logo:hover {
   width: 100%;
@@ -617,9 +660,9 @@ input[type=radio] {
 }
 .about_container .slider_photos {
   width: 100%;
-  max-width: 800px;
+  max-width: 60%;
   height: 600px;
-  height: 100%;
+  height: 80%;
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
@@ -632,6 +675,11 @@ input[type=radio] {
   position: relative;
   width: 100%;
   height: 600px;
+}
+@media screen and (max-width: 800px) {
+  .about_container .slider_photos .cards {
+    height: 300px;
+  }
 }
 .about_container .slider_photos .cards .card {
   position: absolute;
@@ -715,11 +763,26 @@ input[type=radio] {
 .about_container #photo-1:checked ~ .infos #test {
   transform: translateY(-76px);
 }
+@media screen and (max-width: 800px) {
+  .about_container #photo-1:checked ~ .infos #test {
+    transform: translateY(-60px);
+  }
+}
 .about_container #photo-2:checked ~ .infos #test {
   transform: translateY(-152px);
 }
+@media screen and (max-width: 800px) {
+  .about_container #photo-2:checked ~ .infos #test {
+    transform: translateY(-120px);
+  }
+}
 .about_container #photo-3:checked ~ .infos #test {
   transform: translateY(-228px);
+}
+@media screen and (max-width: 800px) {
+  .about_container #photo-3:checked ~ .infos #test {
+    transform: translateY(-180px);
+  }
 }
 .about_container .circles {
   width: 80%;
