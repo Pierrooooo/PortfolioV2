@@ -1,0 +1,72 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    z-index: -1000;
+    background-color: $almost_black;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+
+    .contact_text{
+        font-family: 'Khand', sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 4rem;
+        padding: 10px 10px 0 10px;
+        text-transform: uppercase;
+        color: $almost-white;
+        background: linear-gradient(to right, $red_pink 50%, $almost_black 50%);
+        background-size: 0% 0%;
+        background-position: left bottom;
+        border: 2px solid $red_pink;
+        border-radius: 3px;
+
+        &:hover{
+            background-size: 200% 200%;
+            transition: 0.4s ease-in-out;
+            border-radius: 8px;
+            border: none;
+            
+        padding: 12px 12px 2px 12px;
+        }
+    }
+
+    section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+        
+        a{
+            text-decoration: none;
+            font-family: 'Khand';
+            font-size: 2rem;
+            font-weight: 400;
+            color: $almost-white;
+            text-align: center;
+
+            &:hover{
+                cursor: none;
+            }
+            &:hover .cursordeux{
+                opacity: 1;
+            }
+        }
+        p{
+            font-family: 'Khand';
+            font-size: 2rem;
+            font-weight: 400;
+            color: $almost-white;
+            text-align: center;
+        }
+    }
+    
+}
