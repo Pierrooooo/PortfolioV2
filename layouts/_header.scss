@@ -1,185 +1,39 @@
 header{
-background-color: rgba($almost_black , 0.6);
-backdrop-filter: blur(25px);
-padding: 15px;
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-z-index: 10000;
-// box-shadow:inset 0 2px 10px $almost_black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.4rem;
+    top: 0;
+    left: calc(50% - 600px);
 
     nav{
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
+        width: 95%;
+        max-width: 1500px;
 
-        a{
-            text-decoration: none;
-            cursor: none;
+        .my-logo{
+            width: 4rem;
+            aspect-ratio: 1;
 
-            &:hover .cursordeux{
-                opacity: 1;
-            }
-
-            h1{
-                font-family: 'Khand';
-                font-size: 2.5rem;
-                font-weight: 500;
-                color: $almost_white;
-                width: max-content;
-                padding: 0 10px;
-
-                &::after {
-                    position: absolute;
-                    content: "";
-                    top: 100%;
-                    left: 0;
-                    width: 100%;
-                    height: 3px;
-                    background: $red_pink;
-                    transform: scaleX(0);
-                    transform-origin: right;
-                    transition: transform 0.5s;
-                }
-                
-                &:hover::after {
-                transform: scaleX(1);
-                transform-origin: left;
-                }
-                &:hover{
-                    animation: hover_red_pink 0.5s forwards ;
-                }
-                @keyframes hover_red_pink{
-                    from{color: $almost_white;}
-                    to{color: $red_pink;}
-                }
-                
-                &:hover .cursordeux{
-                    opacity: 1;
-                }
-                
-            }
-        }
-    }
-    
-    ul{
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-        list-style: none;
-
-        @include xl{
-            flex-direction: column;
-            text-align: right;
-            display: none;
-            opacity: 0;
-        }
-
-        a{
-            text-decoration: none;
-            color: $almost_white;
-            font-family: 'Khand';
-            font-size: 2rem;
-            position: relative;
-            cursor: none;
-            padding: 0 10px;
-
-            &::after {
-                position: absolute;
-                content: "";
-                top: 100%;
-                left: 0;
+            img{
                 width: 100%;
-                height: 3px;
-                background: $red_pink;
-                transform: scaleX(0);
-                transform-origin: right;
-                transition: transform 0.5s;
-            }
-            
-            &:hover{
-                animation: hover_red_pink 0.5s forwards;
-            }
-            &:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-            }
-            &:hover .cursordeux{
-                opacity: 1;
-            }
-            @keyframes hover_red_pink{
-                from{color: currentColor;}
-                to{color: $red_pink;}
-            }
-
-        }
-    }
-    .burger_menu{
-        display: none;
-        opacity: 0;
-
-        @include xl{
-            display: block;
-            opacity: 1;
-            display: flex;
-            flex-direction: column;
-            margin-right: 50px;
-            gap: 8px;
-            border: none;
-            background-color: transparent;
-
-            &:hover ~ span{
-                animation: hover_red_pink 0.5s forwards;
-            }
-
-            span{
-                width: 30px;
-                height: 2px;
-                background-color: $almost_white;
-                border-radius: 2px;
-            }
-            .anim_burger1{
-                animation: anim_burger_in1 400ms ease-in-out forwards;
-                animation-delay: 500ms;
-            }
-            @keyframes anim_burger_in1 {
-                from{}
-                to{transform: translateY(5px) rotate(135deg)}
-            }
-            @keyframes anim_burger_ou1 {
-                from{transform: translateY(5px) rotate(135deg)}
-                to{}
-            }
-            .anim_burger2{
-                animation: anim_burger_in2 400ms ease-in-out forwards;
-                animation-delay: 500ms;
-            }
-            @keyframes anim_burger_in2 {
-                from{}
-                to{transform: translateY(-5px) rotate(45deg)}
-            }
-            @keyframes anim_burger_ou2 {
-                from{transform: translateY(-5px) rotate(45deg)}
-                to{}
             }
         }
-        
     }
 }
-.dpblock{
-    display: block;
-}
-.dpnone{
-    display: none;
-}
-.op1{
-    opacity: 1;
-}
-.h_full{
-    height: 100vh;
-}
-.fz{
-    font-size: 2.5rem;
-}
+
+// @media screen and (mmax-width: 1200px) {
+//     .header{
+//         left: 50%;
+//     }
+// }

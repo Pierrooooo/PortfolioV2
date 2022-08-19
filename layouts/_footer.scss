@@ -1,72 +1,200 @@
 footer{
     display: flex;
     flex-direction: column;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    z-index: -1000;
-    background-color: $almost_black;
-    padding: 20px;
-    bottom: 0;
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
+    // height: 125vh;
+    background-color: $black;
+    // clip-path: circle(245.5% at 50% 300%);
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+    color: $almost-white;
 
-    .contact_text{
-        font-family: 'Khand', sans-serif;
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 4rem;
-        padding: 10px 10px 0 10px;
-        text-transform: uppercase;
-        color: $almost-white;
-        background: linear-gradient(to right, $red_pink 50%, $almost_black 50%);
-        background-size: 0% 0%;
-        background-position: left bottom;
-        border: 2px solid $red_pink;
-        border-radius: 3px;
+    .top{
+        @include fcenter;
+        flex-direction: row;
+        width: 100%;
+        height: 80vh;
+        // margin-top: 20vh; need for the clip path in circle
 
-        &:hover{
-            background-size: 200% 200%;
-            transition: 0.4s ease-in-out;
-            border-radius: 8px;
-            border: none;
-            
-        padding: 12px 12px 2px 12px;
+        // .separation{
+        //     height: 80%;
+        //     width: 2px;
+        //     background-color: $almost-black;
+        // }
+
+        .left,
+        .right{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: calc(40% - 1px);
+            height:  80%;
+            margin-top: 20%;
+
+            h5{
+                font-size: 4.4rem;
+                width: fit-content;
+                max-width: 70%;
+                letter-spacing: -.2rem;
+            }
+
+            .footer-cta{
+                // border-top: solid 2px $almost-white;
+                // border-bottom: solid 2px $almost-white;
+                padding: .5em 1em;
+                // border-radius: 5px;
+                width: fit-content;
+                margin-left: auto;
+                transform: translate(-75%, -5vh);
+                transition: .3s;
+                position: relative;
+                color: $almost-white;
+                text-decoration: none;
+
+                &:hover{
+                    color: $almost-black;
+                }
+
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 1px;
+                    width: 100%;
+                    background-color: $almost-white;
+                    transition: .3s;
+                    z-index: -1;
+                }
+
+                &:hover:before{
+                    height: 20%;
+                }
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 1px;
+                    width: 100%;
+                    background-color: $almost-white;
+                    transition: .3s;
+                    z-index: -1;
+                }
+
+                &:hover:after{
+                    height: 80%;
+                }
+            }
+        }
+        .right{
+
+            p{
+                color: $almost-white;
+            }
+
+            .share-socials{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                min-width: 400px;
+                transform: translate(0, 2vh);
+                margin-top: 7.5vh;
+
+                .share-social{
+                    position: static;
+                }
+            }
         }
     }
+    .bottom{
+        @include fcenter;
+        flex-direction: column;
+        overflow: hidden;
+        gap: 4rem;
 
-    section{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    width: 100%;
-        
-        a{
-            text-decoration: none;
-            font-family: 'Khand';
-            font-size: 2rem;
-            font-weight: 400;
-            color: $almost-white;
-            text-align: center;
+        .footer-links{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            gap: 30%;
+            width: 80%;
+            min-width: 350px;
+            text-transform: uppercase;
+            position: relative;
+            padding-top: 1rem;
 
-            &:hover{
-                cursor: none;
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $almost-white;
             }
-            &:hover .cursordeux{
-                opacity: 1;
+
+            .page-links,
+            .socials-links{
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                gap: 3rem;
+
+                a{
+                    text-decoration: none;
+                    color: $almost-white;
+                    font-size: 1.2rem;
+                }
+
             }
         }
-        p{
-            font-family: 'Khand';
-            font-size: 2rem;
-            font-weight: 400;
-            color: $almost-white;
-            text-align: center;
+
+        .banner{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: .5rem;
+            position: relative;
+
+            // &:before{
+            //     content: '';
+            //     position: absolute;
+            //     height: 3px;
+            //     width: 100%;
+            //     top: 14px;
+            //     left: 0;
+            //     background-color: $almost-white;
+            // }
+            // &:after{
+            //     content: '';
+            //     position: absolute;
+            //     height: 3px;
+            //     width: 100%;
+            //     bottom: 1px;
+            //     left: 0;
+            //     background-color: $almost-white;
+            // }
+
+            span{
+                text-transform: uppercase;
+                color: $almost-white;
+                font-size: 8rem;
+                line-height: 7rem;
+                white-space: nowrap;
+                font-weight: 600;
+                font-family: 'Noto Serif Display', serif;
+                animation: banner-anim 25s linear infinite;
+                // transition: .3s;
+            }
+            &:nth-child(2){
+                animation-delay: 25s;
+            }
         }
     }
-    
+}
+
+@-webkit-keyframes banner-anim {
+    from{transform: translate(0);}
+    to{transform: translate(-100%);}
 }

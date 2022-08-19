@@ -4,205 +4,174 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="">
+    <meta content="imgs/logos/Logo_8pierrecaillet.svg" property="og:image">
+    <meta content="Portfolio of Pierre CAILLET" property="og:title">
+    <meta content="This portfolio is designed and created by Pierre Caillet, I'm looking for an alternance in the front-end creative domain." property="og:description">
 
-    <title>Portfolio Pierre CAILLET</title>
+    <title>Portfolio of Pierre CAILLET</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500&family=Khand:wght@300;400;500;600;700&family=Piazzolla:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300;400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="app.js" defer></script>
+
 </head>
 <body class="no_cursor">
     <header id="header">
-        <nav id="nav">
-            <a href="">
-                <h1>Pierre CAILLET</h1>
+        <nav>
+            <a class="my-logo" href="#">
+                <img src="imgs/logos/Logo_8pierrecaillet.svg">
             </a>
-            <ul id="ul">
-                <li><a href="#work_container">Work</a></li>
-                <li><a href="#skills_container">Skills</a></li>
-                <li><a href="#about_container">About Me</a></li>
-                <li><a target="blank" href="imgs/CV_CAILLETPierre.pdf"a>CV</a></li>
-            </ul>
-            <button class="burger_menu" id="burger_menu">
-                <span id="burger_span1"></span>
-                <span id="burger_span2"></span>
-                <span id="burger_span3"></span>
-            </button>
         </nav>
     </header>
-    <section class="big_container" id="big_container">
-        <section class="home_container containers" id="container home_container">
-            <div class="text_iim ">
-                <p class="welcome title_page">WELCOME!</p>
-                <p class="text_webdev">Currently studying at IIM (Institut de l'Internet et du Multimedia), <br>
-                    I want to be a Web Developer (fullstack) </p>
-                <!-- <img class="welcome_form wf1" id="wf1" src="imgs/forms/yeah.png" alt="form's image">
-                <img class="welcome_form wf2" id="wf2" src="imgs/forms/yeah.png" alt="form's image">
-                <img class="welcome_form wf3" id="wf3" src="imgs/forms/yeah.png" alt="form's image"> -->
+    <main>
+
+        <section class="presentation" id="presentation">
+            <div class="who">
+                <p class="hi">Hi, I'm</p>
+                <h1>PIERRE CAILLET</h1>
+                <p class="front-end">a front-end developper based in Paris</p>
             </div>
-            <div class="text_slider">
-                <p class="text_portfolio"> PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO |</p>
-                <div class="me">
-                    <p class="text_me"> PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET | PIERRE CAILLET |</p>
-                    <div class="image_me" style="background-image: url('imgs/me.jpg');" id="image_me"></div>
-                </div>
-                <p class="text_portfolio y"> PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO | PORTFOLIO |</p>
-                
-            </div>      
-        </section>
-        <section class="work_container containers" id="work_container">
+            <h3>Looking for a <b>work-study / alternating</b> starting in September 2022.</h3>
             
-            <div class="text_iim">
-                <p class="work title_page">WORK</p>
-                <p class="text_work">There you can see what I've done and the projects I'm currently working on</p>
-            </div>
-    
-            <ul class="projects">
-                <li class="projectli">
-                    <a class="project">
-                        <p class="project_name">par amour des assos</p>
-                        <div><span>Fullstack</span><span>React Native</span><span>Strapi</span></div>
-                        <img class="project_image" src="imgs/projects/assos/pitch.JPG" alt="Photo of the project 'Par amour des assos'">
-                    </a>
-                </li>
-                <li class="projectli">
-                    <a class="project">
-                        <p class="project_name">bourse aux projets starTourisme</p>
-                        <div><span>Fullstack</span><span>HTML - Tailwind</span><span>Laravel</span></div>
-                        <img class="project_image" src="imgs/projects/bap/logo.jpg" alt="Photo of the project 'starTourisme'">
-                    </a>
-                </li>
-                <li class="projectli">
-                    <a class="project">
-                        <p class="project_name">Integration Maquette</p>
-                        <div><span>Front-End</span><span>HTML - SASS</span><span></span></div>
-                        <img class="project_image" src="imgs/projects/integration_front/header.PNG" alt="Photo of the project 'Integration Maquette'">
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <section class="skills_container containers" id="skills_container">
-            <div class="text_skills">
-                <p class="skills_title title_page">SKILLS</p>
-                <p class="text_my_skills"> There is what I'm using to develop and other stuff like adobe's softwares </p>
-            </div>
-            <div class="skills front">
-                <div class="logos">
-                    <div class="logo" style="background-image: url('imgs/logos/js.png');"></div>
-                    <div class="logo" style="background-image: url('imgs/logos/sass.png');"></div>
-                    <div class="logo" style="background-image: url('imgs/logos/csswithouttext.png');"></div>
-                    <div class="logo" style="background-image: url('imgs/logos/htmlwithouttext.png');"></div>
-                </div>
-                <div class="text_skills">
-                    <p>IT <br>LOOKS <br>GREAT</p>
-                </div>
-            </div>
-    
-            <div class="skills back">
-                <div class="logos">
-                    <div class="logo" style="background-image: url('imgs/logos/python.png');"></div>
-                    <div class="logo" style="background-image: url('imgs/logos/php.png');"></div>
-                    <div class="logo" style="background-image: url('imgs/logos/laragon.png');"></div>
-                    <div class="logo" style="background-image: url('imgs/logos/tableplus.png');"></div>
+            <a href="mailto:pierrecaillet2811@gmail.com" class="cta">
+                <span>Contact Me</span>
+                <image src="imgs/icons/send-message.png" class="contact-shape">
+            </a>
             
-                </div>
-                <div class="text_skills">
-                    <p>OMG <br>IT <br>WORKS !</p>
-                </div>
-            </div>
-    
-            <div class="skills design">
-                <div class="logos">
-                    <div class="logo" style="background-image: url('imgs/logos/xd.png');"></div>
-                    <div class="logo" style="background-image: url('imgs/logos/photoshop.png');"></div>
-                    <div class="logo" style="background-image: url('imgs/logos/figma.png');"></div>
-                </div>
-                <div class="text_skills">
-                    <p>THIS <br>LOOKS <br>BEAUTIFUL</p>
-                </div>
-            </div>
-    
-            <div class="skills other">
-                <div class="logos">
-                    <div class="logo" style="background-image: url('imgs/logos/soft_skills1.jpg');"></div>
-                    <div class="logo" style="background-image: url('imgs/logos/github.png');"></div>
-                    <div class="logo" style="background-image: url('imgs/logos/gitkraken.png');"></div>
-                </div>
-                <div class="text_skills">
-                    <p>I <br>HAVE <br>NO IDEA </p>
-                </div>
-            </div>
+            <a href="#projects" class="go-scroll"><span></span></a>
         </section>
-        <section class="about_container containers" id="about_container">
-            
-            <div class="text_iim">
-                <p class="title_about title_page">ABOUT</p>
-                <p class="text_about">There you can see what I've done and the projects I'm currently working on</p>
-            </div>
-    
-            <div class="slider_photos">
-                <input type="radio" name="slider" id="photo-1" checked>
-                <input type="radio" name="slider" id="photo-2">
-                <input type="radio" name="slider" id="photo-3">
-                <div class="cards">
-                    <label class="card" for="photo-1" id="photo-tene">
-                        <img src="imgs/about/tenerife.jpg" alt="Photo of my holidays at Tenerife">
-                    </label>
-                    <label class="card" for="photo-2" id="photo-squad">
-                        <img src="imgs/about/tir.png" alt="Photo of my Squad when we won regional championship (shoot)">
-                    </label>
-                    <label class="card" for="photo-3" id="photo-hall">
-                        <img src="imgs/about/halloween.jpeg" alt="Photo of the 2021's Halloween Party">
-                    </label>
-                    <!-- <p class="click_me">click me</p> -->
-                </div>
-                <div class="infos">
-                    <div class="info-area" id="test">
-                        <div class="title title1">Invisible</div>
-                        <div class="text text1">Text XD</div>
-                        <div class="title">Tenerife</div>
-                        <div class="text">I recently went on holidays at Tenerife with amazing friends and I wanna do it again asap.</div>
-                        <div class="title">Rifle Shooting</div>
-                        <div class="text">I practice this sport since i'm 10yo and I love it! It make me focusing very hard.</div>
-                        <div class="title">Halloween</div>
-                        <div class="text">This is a picture we took from our 2021's Halloween party</div>
+
+        <section class="projects" id="projects">
+            <h2 data-h2="Projects">Projects</h2>
+            <div class="project project1">
+                <div class="left"></div>
+                <div class="right">
+                    <p class="project-counter">01</p>
+                    <h4>StarWars</h4>
+                    <p class="project-desc project-desc1">This project is a class project which learned me how to make calls to an API.</p>
+                    <div class="click">
+                        <a target="_blanck" href="https://space-travelor.8pier.re/" class="view-project">
+                            <p>View Project</p>
+                            <image src="imgs/icons/arrow-screen-size.png" class="visit-arrow" />
+                        </a>
+                        <a target="_blanck" href="https://space-travelor.8pier.re/" class="visit-link">
+                            <p>Visit Website</p>
+                            <image src="imgs/icons/arrow.png" class="visit-arrow" />
+                        </a>
                     </div>
                 </div>
-                <div class="circles">
-                    <div class="circle_ circle_1"></div>
-                    <div class="circle_ circle_2"></div>
-                    <div class="circle_ circle_3"></div>
-                    <div class="circle_ circle_4"></div>
-                    <div class="circle_ circle_5"></div>
-                    <div class="circle_ circle_6"></div>
+            </div>
+            <div class="project project2">
+                <div class="left"></div>
+                <div class="right">
+                    <p class="project-counter">02</p>
+                    <h4>StarWars</h4>
+                    <p class="project-desc project-desc2">This project is a class project which learned me how to make calls to an API.</p>
+                    <div class="click">
+                        <a target="_blanck" href="https://space-travelor.8pier.re/" class="view-project">
+                            <p>View Project</p>
+                            <image src="imgs/icons/arrow-screen-size.png" class="visit-arrow" />
+                        </a>
+                        <a target="_blanck" href="https://space-travelor.8pier.re/" class="visit-link">
+                            <p>Visit Website</p>
+                            <image src="imgs/icons/arrow.png" class="visit-arrow" />
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="patern"></div>
-            </section>
-        
-    </section>
-
-    <footer>
-        <section>
-            <a href="#big_container">BACK TO TOP</a>
-            <a href="mailto:pierrecaillet2811@gmail.com" class="contact_text">CONTACT</a>
-            <p>©2022</p>
+            <div class="project project3">
+                <div class="left"></div>
+                <div class="right">
+                    <p class="project-counter">03</p>
+                    <h4>StarWars</h4>
+                    <p class="project-desc project-desc3">This project is a class project which learned me how to make calls to an API.</p>
+                    <div class="click">
+                        <a target="_blanck" href="https://space-travelor.8pier.re/" class="view-project">
+                            <p>View Project</p>
+                            <image src="imgs/icons/arrow-screen-size.png" class="visit-arrow" />
+                        </a>
+                        <a target="_blanck" href="https://space-travelor.8pier.re/" class="visit-link">
+                            <p>Visit Website</p>
+                            <image src="imgs/icons/arrow.png" class="visit-arrow" />
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
-    </footer>
 
-    <div class="circle circle1"></div>
-    <div class="circle circle2"></div>
-    <div class="circle circle3"></div>
-    <div class="circle circle4"></div>
-    <div class="circle circle5"></div>
-    <div class="circle circle6"></div>
-    <div class="circle circle7"></div>
-    <div class="circle circle8"></div>    
+        <section class="about" id="about">
+            <h2 data-h2="About">About</h2>
+            <div class="texts">
+                <div class="text">
+                    <h4>Dev & Web Design</h4>
+                    <p>I discoverd HTML, CSS and javascript in class at my first year in the <a target="_blank" href="https://www.iim.fr/">IIM</a> (Institut de l'Internet et du Muldimedia) digital school.
+                    <br> On this same first year I also made my first tries in Digital Art and Web Design.
+                    </p>
+                </div>
+                <!-- <div class="text">
+                    <h4>Creative</h4>
+                    <p>And I really enjoyed it even if I had some difficulties with the aspect of beeing creative isn't easy all the time. But when you do, it feel greats!</p>
+                </div> -->
+                <div class="text">
+                    <h4>Meets</h4>
+                    <p>During this time I meet amazing people with who I've shared some of my best time in class and all around the world! I can't wait to travel even more by their side !!</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <section>
+                <div class="top">
+                    <div class="left">
+                        <h5>Do you like my work ?</h5>
+                        <a href="mailto:pierrecaillet2811@gmail.com" class="footer-cta">Send me feebacks</a>
+                    </div>
+                    <div class="separation"></div>
+                    <div class="right">
+                        <h5>Share it !</h5>
+                        <div class="share-socials">
+                            <a href="" class="footer-cta share-social">Linkedin</a>
+                            <a href="" class="footer-cta share-social">Facebook</a>
+                            <a href="" class="footer-cta share-social">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="footer-links">
+                        <div class="page-links">
+                            <a href="#presentation">Top</a>
+                            <a href="#projects">Projects</a>
+                            <a href="#about">About</a>
+                        </div>
+                        <div class="socials-links">
+                            <a target="_blank" href="https://www.linkedin.com/in/pierre-caillet-447b8a203/">Linkedin</a>
+                            <a target="_blank" href="">Twitter</a>
+                            <a target="_blank" href="https://github.com/Pierrooooo">Git Hub</a>
+                        </div>
+                    </div>
+                    <div class="banner">
+                        <span>CAILLET Pierre's  Portfolio | Web Designer | Front End Developper | CREATIVE WEBSITE LOVER |</span>
+                        <span>CAILLET Pierre's  Portfolio | Web Designer | Front End Developper | CREATIVE WEBSITE LOVER |</span>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+        <div class="loading">
+            <img src="imgs/logos/Logo_8pierrecaillet.svg">
+            <div class="loading-bar"></div>
+        </div>
+        
+    </main>
     
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor cursordeux" id="cursor2"></div>
-    <script type="text/javascript" src="app.js"></script>
+    <div class="cursor cursor-1" id="cursor"></div>
+    <div class="cursor cursor-2" id="cursor2"></div>
+    <div class="cursor cursor-3" id="cursor3"></div>
+    <div class="cursor cursor-4" id="cursor4"></div>
+    <div class="cursor-sonar" id="cursor-sonar"></div>
+
 </body>
 </html>
