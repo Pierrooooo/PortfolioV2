@@ -635,6 +635,10 @@ footer {
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
   color: #FDF6F8;
 }
+footer .all-footer {
+  opacity: 0;
+  transform: translate3d(0, 220px, 0);
+}
 footer .top {
   display: flex;
   justify-content: center;
@@ -649,7 +653,6 @@ footer .top .right {
   align-items: center;
   flex-direction: column;
   width: calc(40% - 1px);
-  height: 80%;
   margin-top: 20%;
 }
 footer .top .left h5,

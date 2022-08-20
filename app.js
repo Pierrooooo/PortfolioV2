@@ -33,7 +33,7 @@ document.addEventListener('mousemove', (event) => {
         cursor4.style.top = event.screenY - 100 + 'px'
     }, thirdDelay);
 
-    // Mouse Stop Mooving
+    // Mouse Stop Mooving  Sonar Thing
 
     if (x) clearTimeout(x);
     x = setTimeout(function(){
@@ -75,10 +75,11 @@ document.querySelector('.visit-link').addEventListener('mouseout', e=> {
     cursor4.style.display = 'block'
 })
 
-//On click on the page 
+//Change the cursor size on click on the page 
 
 document.addEventListener('mousedown', e=> {
-    cursor.style.transform = 'translate(-50%, -50%) scale(.6)'
+    cursor.style.transform = 'translate(-50%, -50%) scale(.4)'
+    cursorSonar.style.transform = 'scale(.4)'
     cursor.style.transition = '.3s'
     cursor2.style.display = 'none'
     cursor3.style.display = 'none'
@@ -87,11 +88,14 @@ document.addEventListener('mousedown', e=> {
 
 document.addEventListener('mouseup', e=> {
     cursor.style.transform = 'translate(-50%, -50%) scale(1)'
+    cursorSonar.style.transform = 'scale(1)'
     cursor.style.transition = 'none'
     cursor2.style.display = 'block'
     cursor3.style.display = 'block'
     cursor4.style.display = 'block'
 })
+
+// Suposed to stop the element that shos the user to scroll when the page is scrolled 
 
 document.addEventListener('scroll', e=> {
 
@@ -168,8 +172,7 @@ window. addEventListener ('load', e => {
 })
 
 
-// others
-
+// Projects Appears
 
 const firstProject = [document.querySelector(".project1 .project-counter"),document.querySelector(".project1 h4"),document.querySelector(".project1 .project-desc"),document.querySelector(".project1 .click")]
 gsap.to(firstProject, {
@@ -216,41 +219,35 @@ gsap.to(thirdProject, {
     ease: "power3.out",
 })
 
-const allH2 = document.querySelectorAll('h2')
+// Section Titles like Projects or About
 
-gsap.to(allH2, {
+const allH2 = document.querySelectorAll('h2')
+allH2.forEach(el => {
+
+    gsap.to(el, {
+        scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        end: "+=800 top",
+        scrub: 1,
+        toggleActions : "play"
+        },
+        y: -50,
+    })
+})
+
+// Footer Appears
+
+const footerSection = document.querySelectorAll('.all-footer')
+
+gsap.to(footerSection, {
     scrollTrigger: {
-    trigger: "h2",
+    trigger: footerSection,
     start: "top bottom",
-    end: "+=800 top",
+    end: "bottom bottom",
     scrub: 1,
     toggleActions : "play"
     },
-    y: -50,
+    opacity: 1,
+    y: -50
 })
-
-// gsap.to(".presentation", {
-//     scrollTrigger: {
-//     trigger: ".presentation",
-//     start: "center center",
-//     end: "center center",
-//     markers: true,
-//     scrub: 1,
-//     toggleActions : "play"
-//     },
-//     opacity: 0,
-//     duration: 3
-// })
-
-// gsap.to(".go-scroll", {
-//     scrollTrigger: {
-//     trigger: ".go-scroll",
-//     start: "top 75%",
-//     end: "+=500",
-//     markers: true,
-//     scrub: 1,
-//     toggleActions : "play"
-//     },
-//     scale: 60,
-//     duration: 3
-// })
