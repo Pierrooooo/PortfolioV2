@@ -43,21 +43,26 @@ document.addEventListener('mousemove', (event) => {
 }, false)
 
 // Change the cursor blend mode on hover buttons
+const hoverCursor = document.querySelectorAll('.hover-cursor')
+hoverCursor.forEach(el => {
+    
+    el.addEventListener('mouseover', () => {
+        cursor.classList.add('blend-mode-difference')
+        cursor2.style.display = 'none'
+        cursor3.style.display = 'none'
+        cursor4.style.display = 'none'
+    })
 
-document.querySelector('.cta').addEventListener('mouseover', e=> {
-    cursor.classList.add('blend-mode-difference')
-    cursor2.style.display = 'none'
-    cursor3.style.display = 'none'
-    cursor4.style.display = 'none'
-})
-document.querySelector('.cta').addEventListener('mouseout', e=> {
-    cursor.classList.remove('blend-mode-difference')
-    cursor2.style.display = 'block'
-    cursor3.style.display = 'block'
-    cursor4.style.display = 'block'
+    el.addEventListener('mouseout', () => {
+        cursor.classList.remove('blend-mode-difference')
+        cursor2.style.display = 'block'
+        cursor3.style.display = 'block'
+        cursor4.style.display = 'block'
+    })
+    
 })
 
-document.querySelector('.visit-link').addEventListener('mouseover', e=> {
+document.querySelector('.visit-link').addEventListener('mouseover', () => {
     cursor.classList.add('blend-mode-difference')
     cursor2.style.display = 'none'
     cursor3.style.display = 'none'
