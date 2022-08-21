@@ -321,6 +321,54 @@ main h2:hover:after {
 main .projects {
   width: 100%;
 }
+main .projects .project-review {
+  position: fixed;
+  inset: 0 0 0 0;
+  transform: translate(100%);
+  z-index: 10;
+  backdrop-filter: blur(20px);
+  height: 100vh;
+  width: 100%;
+  transition: 0.3s cubic-bezier(0.1, 0.3, 0.9, 0.7);
+}
+main .projects .project-review .project-review-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  gap: 2rem;
+  width: calc(100% - 16rem);
+  min-height: calc(100vh - 16rem);
+  margin: 8rem;
+  padding: 12rem;
+  background-color: #FDF6F8;
+  color: #110f0e;
+}
+main .projects .project-review .project-review-content .logo {
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+  height: 5rem;
+  aspect-ratio: 1;
+}
+main .projects .project-review .project-review-content h4 {
+  font-size: 2rem;
+  font-family: "Noto Serif Display", serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+main .projects .project-review .project-review-content .stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+main .projects .project-review .project-review-content .stack p {
+  text-transform: uppercase;
+  color: #CD2658;
+  font-weight: 500;
+  text-shadow: 4px 0 8px rgba(205, 38, 88, 0.2);
+}
 main .projects .project {
   display: flex;
   flex-direction: row;
@@ -541,6 +589,7 @@ main .about .texts .text p a:hover:after {
 
 .cursor {
   position: fixed;
+  z-index: 10000;
   height: 1.4rem;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -570,6 +619,19 @@ main .about .texts .text p a:hover:after {
   transform: translate(-50%, -50%);
   pointer-events: none;
   animation: cursor-sonar 3s infinite ease-in-out;
+}
+
+.close-cursor,
+.close-cursor2 {
+  width: 3px;
+  border-radius: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  height: 4rem;
+  display: none;
+}
+
+.close-cursor2 {
+  transform: translate(-50%, -50%) rotate(135deg);
 }
 
 .blend-mode-difference {
@@ -691,7 +753,7 @@ footer .top .right .footer-cta:before {
 }
 footer .top .left .footer-cta:hover:before,
 footer .top .right .footer-cta:hover:before {
-  height: 20%;
+  height: 22%;
 }
 footer .top .left .footer-cta:after,
 footer .top .right .footer-cta:after {
@@ -753,6 +815,33 @@ footer .bottom .footer-links .socials-links a {
   text-decoration: none;
   color: #FDF6F8;
   font-size: 1.2rem;
+  position: relative;
+}
+footer .bottom .footer-links .page-links a:before,
+footer .bottom .footer-links .socials-links a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: #FDF6F8;
+  transform-origin: left;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+  transform: scaleX(0);
+}
+footer .bottom .footer-links .page-links a:hover:before,
+footer .bottom .footer-links .socials-links a:hover:before {
+  transform: scaleX(1);
+}
+footer .bottom .footer-links .page-links a img,
+footer .bottom .footer-links .socials-links a img {
+  height: 2rem;
+  aspect-ratio: 1;
+}
+footer .bottom .footer-links .socials-links a:before {
+  transform-origin: right;
 }
 footer .bottom .footer-links .separation {
   width: 100%;
@@ -780,8 +869,8 @@ footer .bottom .banner {
 footer .bottom .banner span {
   text-transform: uppercase;
   color: #FDF6F8;
-  font-size: 8rem;
-  line-height: 7rem;
+  font-size: 5rem;
+  line-height: 4rem;
   white-space: nowrap;
   font-weight: 600;
   font-family: "Noto Serif Display", serif;

@@ -1,12 +1,15 @@
 var firstDelay = 20
 var secondDelay = 35
 var thirdDelay = 45
+var ProjectReviewDelay = 3000
 
 var cursor = document.getElementById('cursor')
 var cursorSonar = document.getElementById('cursor-sonar')
 var cursor2 = document.getElementById('cursor2')
 var cursor3 = document.getElementById('cursor3')
 var cursor4 = document.getElementById('cursor4')
+var closeCursor = document.getElementById('close-cursor')
+var closeCursor2 = document.getElementById('close-cursor2')
 var goScroll = document.querySelector('.go-scroll')
 
 var x;  // random var for mouse stop sonar thing 
@@ -32,6 +35,14 @@ document.addEventListener('mousemove', (event) => {
         cursor4.style.left = event.screenX + 'px'
         cursor4.style.top = event.screenY - 100 + 'px'
     }, thirdDelay);
+
+    setTimeout(function() {
+        closeCursor.style.left = event.pageX + 'px'
+        closeCursor.style.top = event.screenY - 100 + 'px'
+        closeCursor.style.transform = 'rotate' + event.screenY / 100 * 3.6 + 'deg'
+        closeCursor2.style.left = event.pageX + 'px'
+        closeCursor2.style.top = event.screenY - 100 + 'px'
+    }, secondDelay);
 
     // Mouse Stop Mooving  Sonar Thing
 
@@ -84,6 +95,8 @@ document.addEventListener('mousedown', e=> {
     cursor2.style.display = 'none'
     cursor3.style.display = 'none'
     cursor4.style.display = 'none'
+    closeCursor.style.transform = 'scale(.4) translate(-50%, -50%) rotate(45deg) '
+    closeCursor2.style.transform = 'scale(.4) translate(-50%, -50%) rotate(135deg) '
 })
 
 document.addEventListener('mouseup', e=> {
@@ -93,6 +106,8 @@ document.addEventListener('mouseup', e=> {
     cursor2.style.display = 'block'
     cursor3.style.display = 'block'
     cursor4.style.display = 'block'
+    closeCursor.style.transform = 'scale(1) translate(-50%, -50%) rotate(45deg) '
+    closeCursor2.style.transform = 'scale(1) translate(-50%, -50%) rotate(135deg) '
 })
 
 // Suposed to stop the element that shos the user to scroll when the page is scrolled 
@@ -126,6 +141,61 @@ document.querySelector('footer').addEventListener('mouseout' , e =>{
     cursor4.style.backgroundColor = '#110f0e'
 })
 
+
+// Clear the URL but it doesn't work
+
+const onlyUrl = window.location.href.replace(window.location.search, "")
+
+
+// Project review pop up
+
+const viewProjectButtons = document.querySelectorAll('.view-project')
+const projectReview = document.querySelector('.project-review')
+
+viewProjectButtons.forEach( el => {
+    
+    el.addEventListener('click', () => {
+
+        projectReview.innerHTML=``
+        projectReview.innerHTML=`
+            <div class="project-review-content">
+                <h4>`+ el.dataset.title +`</h4>
+                <div class="stack">
+                    <p>`+ el.dataset.stack +`</p>
+                </div>
+                <p class="project-intro">`+ el.dataset.intro +`<br>
+                <p class="project-text">`+ el.dataset.text +`</p>
+                <img class="logo" src="imgs/logos/Logo_8pierrecaillet.svg">
+            </div>
+        `
+        projectReview.style.transform = 'translate(0)'
+        
+        projectReview.addEventListener('click', e =>{
+            projectReview.style.transform = 'translate(100%)'
+        })
+    })
+})
+
+projectReview.addEventListener('mouseover', e =>{
+    cursor.style.display = 'none'
+    cursor2.style.display = 'none'
+    cursor3.style.display = 'none'
+    cursor4.style.display = 'none'
+    cursorSonar.style.display = 'none'
+    closeCursor.style.display = 'block'
+    closeCursor2.style.display = 'block'
+})
+projectReview.addEventListener('mouseout', e =>{
+    cursor.style.display = 'block'
+    cursor2.style.display = 'block'
+    cursor3.style.display = 'block'
+    cursor4.style.display = 'block'
+    cursorSonar.style.display = 'block'
+    closeCursor.style.display = 'none'
+    closeCursor2.style.display = 'none'
+})
+
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GSAP ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 gsap.registerPlugin(ScrollTrigger);
@@ -137,7 +207,7 @@ const imgLoadAnim = document.querySelector('.loading img')
 const loadingBar = document.querySelector('.loading-bar')
 const loading = document.querySelector('.loading')
 
-window. addEventListener ('load', e => {
+window.addEventListener ('load', e => {
 
     const TL = gsap.timeline ({paused : true})
 
