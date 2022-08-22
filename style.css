@@ -142,12 +142,33 @@ main .presentation {
   width: 100%;
   max-width: 2000px;
   position: relative;
-  margin-top: 120px;
+  margin-top: 20px;
 }
 main .presentation .who {
   display: block;
   position: relative;
   width: fit-content;
+}
+main .presentation .who:before {
+  content: "'";
+  font-family: "Noto Serif Display", serif;
+  position: absolute;
+  bottom: -12rem;
+  left: -6rem;
+  color: transparent;
+  font-size: 12rem;
+  transform: rotate(-30deg);
+  -webkit-text-stroke: 2px #CD2658;
+}
+main .presentation .who:after {
+  content: "'";
+  font-family: "Noto Serif Display", serif;
+  position: absolute;
+  bottom: -17.2rem;
+  left: -3.8rem;
+  color: #CD2658;
+  font-size: 17rem;
+  transform: rotate(-46deg);
 }
 main .presentation .who .hi {
   position: absolute;
@@ -162,6 +183,26 @@ main .presentation .who h1 {
   font-weight: 600;
   font-size: 7rem;
   color: #110f0e;
+  position: relative;
+}
+main .presentation .who h1:before {
+  content: "'";
+  position: absolute;
+  top: -6rem;
+  right: -4rem;
+  color: #CD2658;
+  font-size: 12rem;
+  transform: rotate(32deg);
+}
+main .presentation .who h1:after {
+  content: "'";
+  position: absolute;
+  top: -7.2rem;
+  right: -3.8rem;
+  color: transparent;
+  font-size: 17rem;
+  transform: rotate(28deg);
+  -webkit-text-stroke: 2px #CD2658;
 }
 main .presentation .who .front-end {
   position: absolute;
@@ -336,13 +377,14 @@ main .projects .project-review .project-review-content {
   justify-content: center;
   flex-direction: column;
   position: relative;
-  gap: 2rem;
+  gap: 1rem;
   width: calc(100% - 16rem);
   min-height: calc(100vh - 16rem);
   margin: 8rem;
   padding: 12rem;
   background-color: #FDF6F8;
   color: #110f0e;
+  border: solid 4px #110f0e;
 }
 main .projects .project-review .project-review-content .logo {
   position: absolute;
@@ -351,17 +393,68 @@ main .projects .project-review .project-review-content .logo {
   height: 5rem;
   aspect-ratio: 1;
 }
+main .projects .project-review .project-review-content .close-project-review {
+  position: absolute;
+  bottom: 6rem;
+  right: 6rem;
+  height: 3rem;
+  aspect-ratio: 1;
+  background-color: #110f0e;
+  display: none;
+}
+main .projects .project-review .project-review-content .close-project-review span {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  height: 1.5rem;
+  width: 1.5px;
+  background-color: #FDF6F8;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+main .projects .project-review .project-review-content .close-project-review span:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
 main .projects .project-review .project-review-content h4 {
   font-size: 2rem;
   font-family: "Noto Serif Display", serif;
   font-weight: 600;
-  margin-bottom: 1rem;
 }
 main .projects .project-review .project-review-content .stack {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 2rem;
+  position: relative;
+  width: fit-content;
+  margin-bottom: 2rem;
+}
+main .projects .project-review .project-review-content .stack:before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  width: 80%;
+  height: 1.5px;
+  background-color: #CD2658;
+  transition: 0.3s;
+  transform-origin: right;
+}
+main .projects .project-review .project-review-content .stack:hover:before {
+  transform: scaleX(0);
+}
+main .projects .project-review .project-review-content .stack:after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  width: 80%;
+  height: 1.5px;
+  background-color: #CD2658;
+  transition: 0.3s;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition-delay: 0.1s;
+}
+main .projects .project-review .project-review-content .stack:hover:after {
+  transform: scaleX(1);
 }
 main .projects .project-review .project-review-content .stack p {
   text-transform: uppercase;
@@ -499,6 +592,8 @@ main .about {
   width: 100%;
   position: relative;
   padding: 30vh 0 30vh 0;
+  margin-bottom: 15vh;
+  overflow-x: hidden;
 }
 main .about .texts {
   display: flex;
@@ -506,10 +601,13 @@ main .about .texts {
   align-items: center;
   position: relative;
   flex-direction: column;
-  gap: 100vh;
+  gap: 400px;
 }
 main .about .texts .text {
   width: 45%;
+  background-color: #FDF6F8;
+  background-image: url(https://grainy-gradients.vercel.app/noise.svg);
+  transform-origin: top;
 }
 main .about .texts .text h4 {
   font-size: 2.4rem;
@@ -525,6 +623,8 @@ main .about .texts .text h4 {
   transition-duration: 0.2s;
   width: 100%;
   overflow: hidden;
+  z-index: 10;
+  margin-bottom: 4rem;
 }
 main .about .texts .text h4:hover {
   color: #110f0e;
@@ -543,19 +643,22 @@ main .about .texts .text h4:before {
 main .about .texts .text h4:hover:before {
   left: 95%;
 }
-main .about .texts .text p {
+main .about .texts .text .text-bottom {
+  position: relative;
+}
+main .about .texts .text .text-bottom p {
   font-size: 2rem;
   color: #110f0e;
   min-width: 300px;
   font-weight: 400;
   margin-top: 2rem;
 }
-main .about .texts .text p a {
+main .about .texts .text .text-bottom p a {
   text-decoration: none;
   position: relative;
   color: #110f0e;
 }
-main .about .texts .text p a:before {
+main .about .texts .text .text-bottom p a:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -567,7 +670,7 @@ main .about .texts .text p a:before {
   transition: 0.3s;
   transition-delay: 0.1s;
 }
-main .about .texts .text p a:after {
+main .about .texts .text .text-bottom p a:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -580,11 +683,44 @@ main .about .texts .text p a:after {
   transition-delay: 0.2s;
   transform: scaleX(0);
 }
-main .about .texts .text p a:hover:before {
+main .about .texts .text .text-bottom p a:hover:before {
   transform: scaleX(0);
 }
-main .about .texts .text p a:hover:after {
+main .about .texts .text .text-bottom p a:hover:after {
   transform: scaleX(1);
+}
+main .about .texts .text .text-bottom .big-text {
+  position: absolute;
+  font-family: "Chillax-Variable";
+  font-weight: 900;
+  color: #CD2658;
+  opacity: 0.1;
+  top: 1rem;
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
+  font-size: 12vw;
+  white-space: nowrap;
+  transform: translate(-90%);
+  text-transform: uppercase;
+  pointer-events: none;
+}
+main .about .texts .text .text-bottom .big-text:nth-last-child(1) {
+  top: 13vw;
+  transform: rotate(180deg) translate(-90%);
+}
+main .line {
+  height: 2px;
+  width: 100%;
+  background-color: #CD2658;
+  transform: rotate(-5deg);
+  z-index: 1000;
+}
+main .line2 {
+  transform: translate(0, -50px) rotate(-2deg);
+}
+main .line3 {
+  transform: translate(0, 20px) rotate(4deg);
 }
 
 .cursor {
@@ -623,7 +759,7 @@ main .about .texts .text p a:hover:after {
 
 .close-cursor,
 .close-cursor2 {
-  width: 3px;
+  width: 1.8px;
   border-radius: 0;
   transform: translate(-50%, -50%) rotate(45deg);
   height: 4rem;
@@ -782,7 +918,7 @@ footer .top .right .share-socials {
   width: 80%;
   min-width: 400px;
   transform: translate(0, 2vh);
-  margin-top: 7.5vh;
+  margin-top: 6vh;
 }
 footer .top .right .share-socials .share-social {
   position: static;
@@ -825,7 +961,7 @@ footer .bottom .footer-links .socials-links a:before {
   left: 0;
   width: 100%;
   height: 1.5px;
-  background-color: #FDF6F8;
+  background-color: #CD2658;
   transform-origin: left;
   transition: 0.3s;
   transition-delay: 0.1s;
@@ -864,7 +1000,6 @@ footer .bottom .banner {
   flex-direction: row;
   flex-wrap: nowrap;
   padding: 0.5rem;
-  position: relative;
 }
 footer .bottom .banner span {
   text-transform: uppercase;

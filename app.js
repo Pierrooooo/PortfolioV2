@@ -166,6 +166,10 @@ viewProjectButtons.forEach( el => {
                 <p class="project-intro">`+ el.dataset.intro +`<br>
                 <p class="project-text">`+ el.dataset.text +`</p>
                 <img class="logo" src="imgs/logos/Logo_8pierrecaillet.svg">
+                <div class="close-project-review">
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         `
         projectReview.style.transform = 'translate(0)'
@@ -241,6 +245,18 @@ window.addEventListener ('load', e => {
     TL.play()
 })
 
+// Presentation Desappears
+
+const presentation = document.querySelector('#presentation')
+gsap.to(presentation, {
+    scrollTrigger: {
+    trigger: presentation,
+    start: "bottom center",
+    end: "bottom +=300",
+    scrub: true,
+    },
+    opacity: 0,
+})
 
 // Projects Appears
 
@@ -305,6 +321,54 @@ allH2.forEach(el => {
         y: -50,
     })
 })
+
+// About Section
+
+const allBigTexts = document.querySelectorAll('.big-text')
+const allText = document.querySelectorAll('.text')
+const allTextBottom = document.querySelectorAll('.text-bottom')
+
+
+allBigTexts.forEach(el => {
+    gsap.to(el, {
+        scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        end: "+=400 top",
+        scrub: 1,
+        toggleActions : "play"
+        },
+        x: 90,
+    })
+})
+
+allText.forEach(el => {
+    gsap.to(el, {
+        scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        end: "+=400 top",
+        scrub: 1,
+        toggleActions : "play"
+        },
+        y: -40,
+    })
+})
+
+allTextBottom.forEach(el => {
+    gsap.to(el, {
+        scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        end: "+=400 top",
+        scrub: 1,
+        toggleActions : "play"
+        },
+        y: -60,
+    })
+})
+
+
 
 // Footer Appears
 

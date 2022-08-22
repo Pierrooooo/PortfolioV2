@@ -63,12 +63,34 @@ main{
         width: 100%;
         max-width: 2000px;
         position: relative;
-        margin-top: 120px;
+        margin-top: 20px;
 
         .who{
             display: block;
             position: relative;
             width: fit-content;
+
+            &:before{
+                content: "'";
+                font-family: "Noto Serif Display", serif;
+                position: absolute;
+                bottom: -12rem;
+                left: -6rem;
+                color: transparent;
+                font-size: 12rem;
+                transform: rotate(-30deg);
+                -webkit-text-stroke: 2px $red;
+            }
+            &:after{
+                content: '\'';
+                font-family: 'Noto Serif Display', serif;
+                position: absolute;
+                bottom: -17.2rem;
+                left: -3.8rem;
+                color: #CD2658;
+                font-size: 17rem;
+                transform: rotate(-46deg);
+            }
 
             .hi{
                 position: absolute;
@@ -84,6 +106,27 @@ main{
                 font-weight: 600;
                 font-size: 7rem;
                 color: $almost-black;
+                position: relative;
+
+                &:before{
+                    content: '\'';
+                    position: absolute;
+                    top: -6rem;
+                    right: -4rem;
+                    color: $red;
+                    font-size: 12rem;
+                    transform: rotate(32deg);
+                }
+                &:after{
+                    content: '\'';
+                    position: absolute;
+                    top: -7.2rem;
+                    right: -3.8rem;
+                    color: transparent;
+                    font-size: 17rem;
+                    transform: rotate(28deg);
+                    -webkit-text-stroke: 2px $red;
+                }
             }
 
             .front-end{
@@ -280,13 +323,14 @@ main{
                 justify-content: center;
                 flex-direction: column;
                 position: relative;
-                gap: 2rem;
+                gap: 1rem;
                 width: calc(100% - 16rem);
                 min-height: calc(100vh - 16rem);
                 margin: 8rem;
                 padding: 12rem;
                 background-color: $almost-white;
                 color: $almost-black;
+                border: solid 4px $almost-black;
                 
                 .logo{
                     position: absolute;
@@ -295,12 +339,34 @@ main{
                     height: 5rem;
                     aspect-ratio: 1;
                 }
+                .close-project-review{
+                    position: absolute;
+                    bottom: 6rem;
+                    right: 6rem;
+                    height: 3rem;
+                    aspect-ratio: 1;
+                    background-color: $almost-black;
+                    display: none;
+
+                    span{
+                        position: absolute;
+                        top: 1.5rem;
+                        left: 1.5rem;
+                        height: 1.5rem;
+                        width: 1.5px;
+                        background-color: $almost-white;
+                        transform: translate(-50%, -50%) rotate(45deg);
+
+                        &:nth-child(1){
+                            transform: translate(-50%, -50%) rotate(135deg);
+                        }
+                    }
+                }
 
                 h4{
                     font-size: 2rem;
                     font-family: 'Noto Serif Display', serif;
                     font-weight: 600;
-                    margin-bottom: 1rem;
                 }
 
                 .stack{
@@ -308,6 +374,38 @@ main{
                     flex-direction: row;
                     flex-wrap: nowrap;
                     gap: 2rem;
+                    position: relative;
+                    width: fit-content;
+                    margin-bottom: 2rem;
+
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        bottom: -.5rem;
+                        width: 80%;
+                        height: 1.5px;
+                        background-color: $red;
+                        transition: .3s;
+                        transform-origin: right;
+                    }
+                    &:hover:before{
+                        transform: scaleX(0);
+                    }
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        bottom: -.5rem;
+                        width: 80%;
+                        height: 1.5px;
+                        background-color: $red;
+                        transition: .3s;
+                        transform-origin: left;
+                        transform: scaleX(0);
+                        transition-delay: .1s;
+                    }
+                    &:hover:after{
+                        transform: scaleX(1);
+                    }
 
                     p{
                         text-transform: uppercase;
@@ -318,7 +416,6 @@ main{
                 }
 
                 .project-intro{
-
                 }
 
                 .project-text{
@@ -482,15 +579,20 @@ main{
         position: relative;
         // background-color: $black;
         padding: 30vh 0 30vh 0;
+        margin-bottom: 15vh;
+        overflow-x: hidden;
 
         .texts{
             @include fcenter;
             position: relative;
             flex-direction: column;
-            gap: 100vh;
+            gap: 400px;
 
             .text{
                 width: 45%;
+                background-color: $almost-white;
+                background-image: url(https://grainy-gradients.vercel.app/noise.svg);
+                transform-origin: top;
 
                 h4{
                     font-size: 2.4rem;
@@ -504,10 +606,10 @@ main{
                     font-family: 'Noto Serif Display', serif;
                     transition-delay: .2s;
                     transition-duration: .2s;
-
                     width: 100%;
                     overflow: hidden;
-                    // background-color: $almost-white;
+                    z-index: 10;
+                    margin-bottom: 4rem;
 
                     &:hover{
                         color: $almost-black;
@@ -528,77 +630,99 @@ main{
                     &:hover:before{
                         left: 95%;
                     }
-
-                    // &:before{
-                    //     content: '';
-                    //     position: absolute;
-                    //     height: 100%;
-                    //     width: 3rem;
-                    //     top: 0;
-                    //     left: -3rem;
-                    //     background-color: $almost-white;
-                    // }
-
-                    // &:after{
-                    //     content: '';
-                    //     position: absolute;
-                    //     height: 100%;
-                    //     width: 100%;
-                    //     top: 0;
-                    //     left: -3rem;
-                    //     background-color: $almost-white;
-                    // }
                 }
-                
-                p{
-                    font-size: 2rem;
-                    color: $almost-black;
-                    min-width: 300px;
-                    font-weight: 400;
-                    margin-top: 2rem;
-        
-                    a{
-                        text-decoration: none;
-                        position: relative;
+
+                .text-bottom{
+                    position: relative;
+
+                    p{
+                        font-size: 2rem;
                         color: $almost-black;
-        
-                        &:before{
-                            content: '';
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 1.5px;
-                            background-color: $almost-black;
-                            transform-origin: right;
-                            transition: .3s;
-                            transition-delay: .1s;
+                        min-width: 300px;
+                        font-weight: 400;
+                        margin-top: 2rem;
+    
+                        
+            
+                        a{
+                            text-decoration: none;
+                            position: relative;
+                            color: $almost-black;
+            
+                            &:before{
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 1.5px;
+                                background-color: $almost-black;
+                                transform-origin: right;
+                                transition: .3s;
+                                transition-delay: .1s;
+                            }
+            
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 1.5px;
+                                background-color: $almost-black;
+                                transform-origin: left;
+                                transition: .3s;
+                                transition-delay: .2s;
+                                transform: scaleX(0);
+                            }
+            
+                            &:hover:before{
+                                transform: scaleX(0);
+                            }
+                            &:hover:after{
+                                transform: scaleX(1);
+                            }
                         }
-        
-                        &:after{
-                            content: '';
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 1.5px;
-                            background-color: $almost-black;
-                            transform-origin: left;
-                            transition: .3s;
-                            transition-delay: .2s;
-                            transform: scaleX(0);
-                        }
-        
-                        &:hover:before{
-                            transform: scaleX(0);
-                        }
-                        &:hover:after{
-                            transform: scaleX(1);
+                    }
+
+                    .big-text{
+                        position: absolute;
+                        font-family: 'Chillax-Variable';
+                        font-weight: 900;
+                        color: $red;
+                        opacity: .1;
+                        top: 1rem;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 4rem;
+                        font-size: 12vw;
+                        white-space: nowrap;
+                        transform: translate(-90%);
+                        text-transform: uppercase;
+                        pointer-events: none;
+                        
+                        &:nth-last-child(1){
+                            top: 13vw;
+                            transform: rotate(180deg) translate(-90%);
                         }
                     }
                 }
             }            
         }        
+    }
+
+    .line{
+        height: 2px;
+        width: 100%;
+        background-color: $red;
+        transform: rotate(-5deg);
+        z-index: 1000;
+    }
+    .line2{
+        transform:translate(0, -50px) rotate(-2deg);
+    }
+    .line3{
+        transform: translate(0, 20px) rotate(4deg);
     }
 }
 
@@ -634,7 +758,7 @@ main{
 }
 .close-cursor,
 .close-cursor2{
-    width: 3px;
+    width: 1.8px;
     border-radius: 0;
     transform: translate(-50%, -50%) rotate(45deg);
     height: 4rem;
