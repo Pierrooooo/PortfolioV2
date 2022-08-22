@@ -580,7 +580,7 @@ main{
         // background-color: $black;
         padding: 30vh 0 30vh 0;
         margin-bottom: 15vh;
-        overflow-x: hidden;
+        overflow: hidden;
 
         .texts{
             @include fcenter;
