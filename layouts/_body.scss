@@ -10,16 +10,18 @@
 html{
     font-size: 16px;
     scroll-behavior: smooth;
-    
+
     @include xl{
         font-size: 10px;
     }
 
     background-color: $almost-white;
     background-image: url(https://grainy-gradients.vercel.app/noise.svg);
-    
+
     font-family: 'Chillax-Variable';
     font-weight: 400;
+
+    overflow-x: hidden;
 }
 main{
     display: block;
@@ -107,6 +109,7 @@ main{
                 font-size: 7rem;
                 color: $almost-black;
                 position: relative;
+                text-align: center;
 
                 &:before{
                     content: '\'';
@@ -144,7 +147,6 @@ main{
             margin-top: 120px;
             font-family: 'Chillax-Variable';
             font-weight: 400;
-            line-height: 2rem;
             min-width: 350px;
 
             b{
@@ -153,6 +155,7 @@ main{
                 position: relative;
                 color: $almost-white;
                 padding: .2rem .8rem;
+                white-space: nowrap;
 
                 &:before{
                     content: '';
@@ -186,7 +189,7 @@ main{
                 border: solid 2px $almost-black;
                 background: transparent;
                 height: 64px;
-                width: 64px;
+                aspect-ratio: 1;
                 transition: all .3s ease;
                 transform: rotate(45deg);
             }
@@ -476,16 +479,15 @@ main{
                     // text-align: center;
                     text-align: left;
                     transition: .3s;
-                    
                     opacity: 0;
                 }
 
                 .project-desc{
                     width: 40%;
+                    min-width: 230px;
                     text-align: right;
                     font-size: 1rem;
                     transition: .3s;
-                    
                     opacity: 0;
                 }
 
@@ -497,7 +499,6 @@ main{
                     width: 100%;
                     height: fit-content;
                     transition: .3s;
-                    
                     opacity: 0;
 
                     a{
@@ -525,6 +526,7 @@ main{
                         p{
                             text-decoration: none;
                             transform-origin: left;
+                            text-align: right;
                             transition: .4s;
                             width: 0;
                             opacity: 0;
@@ -694,7 +696,6 @@ main{
                         top: 1rem;
                         width: 100%;
                         height: 100%;
-                        font-size: 4rem;
                         font-size: 12vw;
                         white-space: nowrap;
                         transform: translate(-90%);

@@ -94,6 +94,7 @@ html {
   background-image: url(https://grainy-gradients.vercel.app/noise.svg);
   font-family: "Chillax-Variable";
   font-weight: 400;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 800px) {
   html {
@@ -184,6 +185,7 @@ main .presentation .who h1 {
   font-size: 7rem;
   color: #110f0e;
   position: relative;
+  text-align: center;
 }
 main .presentation .who h1:before {
   content: "'";
@@ -217,7 +219,6 @@ main .presentation h3 {
   margin-top: 120px;
   font-family: "Chillax-Variable";
   font-weight: 400;
-  line-height: 2rem;
   min-width: 350px;
 }
 main .presentation h3 b {
@@ -226,6 +227,7 @@ main .presentation h3 b {
   position: relative;
   color: #FDF6F8;
   padding: 0.2rem 0.8rem;
+  white-space: nowrap;
 }
 main .presentation h3 b:before {
   content: "";
@@ -257,7 +259,7 @@ main .presentation .cta:before {
   border: solid 2px #110f0e;
   background: transparent;
   height: 64px;
-  width: 64px;
+  aspect-ratio: 1;
   transition: all 0.3s ease;
   transform: rotate(45deg);
 }
@@ -513,6 +515,7 @@ main .projects .project .right h4 {
 }
 main .projects .project .right .project-desc {
   width: 40%;
+  min-width: 230px;
   text-align: right;
   font-size: 1rem;
   transition: 0.3s;
@@ -550,6 +553,7 @@ main .projects .project .right .click .view-project .visit-arrow {
 main .projects .project .right .click .view-project p {
   text-decoration: none;
   transform-origin: left;
+  text-align: right;
   transition: 0.4s;
   width: 0;
   opacity: 0;
@@ -698,7 +702,6 @@ main .about .texts .text .text-bottom .big-text {
   top: 1rem;
   width: 100%;
   height: 100%;
-  font-size: 4rem;
   font-size: 12vw;
   white-space: nowrap;
   transform: translate(-90%);
@@ -843,15 +846,15 @@ footer .top {
   align-items: center;
   flex-direction: row;
   width: 100%;
-  height: 80vh;
+  height: 60vh;
+  margin-top: 20vh;
 }
 footer .top .left,
 footer .top .right {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: calc(40% - 1px);
-  margin-top: 20%;
+  width: 40%;
 }
 footer .top .left h5,
 footer .top .right h5 {
@@ -864,8 +867,7 @@ footer .top .left .footer-cta,
 footer .top .right .footer-cta {
   padding: 0.5em 1em;
   width: fit-content;
-  margin-left: auto;
-  transform: translate(-75%, -5vh);
+  transform: translate(0, -4vh);
   transition: 0.3s;
   position: relative;
   color: #FDF6F8;
@@ -910,11 +912,15 @@ footer .top .right .footer-cta:hover:after {
 footer .top .right p {
   color: #FDF6F8;
 }
+footer .top .right h5 {
+  text-align: center;
+  width: 100%;
+}
 footer .top .right .share-socials {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 80%;
   min-width: 400px;
   transform: translate(0, 2vh);
@@ -922,6 +928,9 @@ footer .top .right .share-socials {
 }
 footer .top .right .share-socials .share-social {
   position: static;
+}
+footer .top .left .footer-cta {
+  transform: translate(75%, -4vh);
 }
 footer .bottom {
   display: flex;
@@ -1024,6 +1033,282 @@ footer .bottom .banner:nth-child(3) {
   }
   to {
     transform: translate(-100%);
+  }
+}
+@media screen and (max-width: 1760px) {
+  footer .top .left, footer .top .right {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  footer .top .left, footer .top .right {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1415px) {
+  footer .top .left h5, footer .top .right h5 {
+    font-size: 3.8rem;
+  }
+  footer .top .right .footer-cta {
+    transform: translate(0, -4vh);
+  }
+}
+@media screen and (max-width: 1350px) {
+  main .presentation .who h1 {
+    font-size: 5rem;
+  }
+  main .presentation .who .front-end {
+    bottom: -7.8rem;
+  }
+  main h2 {
+    font-size: 6rem;
+  }
+  main .projects .project .right {
+    padding: 4rem;
+  }
+  main .projects .project .right .project-counter {
+    font-size: 4.5rem;
+  }
+  main .projects .project .right h4 {
+    font-size: 4.5rem;
+  }
+  main .about {
+    padding: 15vh 0 15vh 0;
+    margin-bottom: 5vh;
+  }
+  main .about .texts {
+    gap: 250px;
+  }
+  main .about .texts .text .text-bottom p {
+    font-size: 1.4rem;
+  }
+
+  footer .top .right .footer-cta {
+    transform: translate(0, -5vh);
+  }
+}
+@media screen and (max-width: 1210px) {
+  footer .top {
+    flex-direction: column;
+    gap: 0;
+  }
+  footer .top .left, footer .top .right {
+    margin-top: 6vh;
+    width: 71%;
+  }
+  footer .top .left h5, footer .top .right h5 {
+    text-align: center;
+    font-size: 4rem;
+  }
+  footer .top .left .footer-cta {
+    transform: translate(0, 1vh);
+  }
+  footer .top .right .footer-cta {
+    transform: translate(0, -7vh);
+  }
+}
+@media screen and (max-width: 1000px) {
+  main .presentation .who h1 {
+    font-size: 4rem;
+  }
+  main .presentation .who .hi, main .presentation .who .front-end {
+    font-size: 1.5rem;
+  }
+  main .presentation .who .front-end {
+    bottom: -6rem;
+  }
+  main .presentation .cta span {
+    font-size: 1.1rem;
+  }
+  main .presentation .cta:before {
+    height: 48px;
+    top: 8px;
+  }
+  main .presentation .cta img {
+    height: 1.5rem;
+  }
+  main .projects .project .right {
+    padding: 2rem;
+  }
+  main .projects .project .right .project-counter {
+    font-size: 3.5rem;
+  }
+  main .projects .project .right h4 {
+    font-size: 3.5rem;
+  }
+  main .projects .project .right .click p {
+    font-size: 0.8rem;
+    margin: 0 !important;
+  }
+  main .projects .project .right .click .view-project .visit-arrow {
+    height: 1rem;
+  }
+  main .projects .project .right .click .visit-link .visit-arrow {
+    height: 1rem;
+  }
+  main .about .texts .text {
+    width: 65%;
+  }
+  main .about .texts .text h4 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  main .presentation .who h1 {
+    font-size: 3.5rem;
+  }
+  main .presentation .who .hi, main .presentation .who .front-end {
+    font-size: 1rem;
+  }
+  main .presentation .who .hi {
+    top: -1rem;
+  }
+  main .presentation .who .front-end {
+    bottom: -2.6rem;
+  }
+  main .projects .project .left {
+    transition: 0.3s;
+  }
+  main .projects .project .left:hover {
+    width: 105%;
+  }
+  main .projects .project .right {
+    transition: 0.3s;
+    width: 65%;
+  }
+}
+@media screen and (max-width: 800px) {
+  main .presentation .who:before {
+    bottom: -14rem;
+    left: -2rem;
+  }
+  main .presentation .who:after {
+    bottom: -19.2rem;
+    left: 0.2rem;
+  }
+  main .presentation .who h1 {
+    font-size: 6rem;
+  }
+  main .presentation .who h1:before {
+    top: -12rem;
+    right: -1rem;
+  }
+  main .presentation .who h1:after {
+    top: -13.2rem;
+    right: -0.8rem;
+  }
+  main .presentation .who .hi, main .presentation .who .front-end {
+    font-size: 2rem;
+  }
+  main .presentation .who .hi {
+    top: -1.6rem;
+  }
+  main .presentation .who .front-end {
+    bottom: -7.6rem;
+  }
+  main .presentation h3 {
+    font-size: 2rem;
+    width: 70%;
+  }
+  main .presentation .cta span {
+    font-size: 1.5rem;
+  }
+  main .presentation .cta:before {
+    scale: 0.9;
+    top: -4px;
+  }
+  main .about {
+    scale: 1.3;
+    margin-top: 10vh;
+  }
+  main .about .texts {
+    gap: 150px;
+  }
+  main .about .texts .text .text-bottom p {
+    margin-top: 5rem;
+  }
+  main .about .texts .text .text-bottom .big-text {
+    top: -5.5rem;
+  }
+  main .projects .project .left {
+    width: 32%;
+  }
+  main .projects .project .right .project-counter {
+    font-size: 6rem;
+  }
+  main .projects .project .right h4 {
+    font-size: 6rem;
+  }
+  main .projects .project .right .project-desc {
+    font-size: 1.7rem;
+  }
+  main .projects .project .right .click p {
+    font-size: 1.5rem;
+  }
+  main .projects .project .right .click .view-project .visit-arrow {
+    height: 2rem;
+  }
+  main .projects .project .right .click .visit-link .visit-arrow {
+    height: 2rem;
+  }
+  main footer .top .left, main footer .top .right {
+    scale: 1.3;
+  }
+  main footer .top .left h5, main footer .top .right h5 {
+    font-size: 5rem;
+  }
+  main footer .top .right {
+    margin-top: 11vh;
+  }
+  main footer .bottom .footer-links .page-links a {
+    font-size: 1.5rem;
+  }
+  main footer .bottom .footer-links .copyright-socials-links a {
+    height: 3rem;
+  }
+  main footer .bottom .footer-links .copyright-socials-links a img {
+    height: 2.5rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  main .presentation .who h1 {
+    font-size: 4.5rem;
+  }
+  main .presentation .who .hi, main .presentation .who .front-end {
+    font-size: 1.7rem;
+  }
+  main .presentation .who .hi {
+    top: -5rem;
+  }
+  main .presentation .who .front-end {
+    bottom: -10rem;
+    right: 3rem;
+  }
+  main .projects .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  main .projects .project .left {
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  main .projects .project .right {
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #FDF6F8;
+    background-image: url(https://grainy-gradients.vercel.app/noise.svg);
+  }
+  main .about {
+    margin-top: 0;
+  }
+  main footer .top .left, main footer .top .right {
+    width: 80%;
+  }
+  main footer .top .left h5, main footer .top .right h5 {
+    font-size: 4rem;
   }
 }
 

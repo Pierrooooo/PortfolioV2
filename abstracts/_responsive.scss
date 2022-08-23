@@ -1,0 +1,449 @@
+@media screen and (max-width: 1760px)  {
+    footer {
+        .top{
+            .left, .right {
+                width: 45%;
+                
+            }
+        }
+    }  
+}
+@media screen and (max-width: 1600px)  {
+    footer {
+        .top{
+            .left, .right {
+                width: 50%;
+            }
+            .left{
+                .footer-cta{
+                }
+            }
+        }
+    }  
+}
+@media screen and (max-width: 1415px)  {
+    footer {
+        .top{
+            .left, .right {
+                h5{
+                    font-size: 3.8rem;
+                }
+            }
+            .right{
+                .footer-cta{
+                    transform: translate(0, -4vh);
+                }
+            }
+        }
+    }  
+}
+
+
+@media screen and (max-width: 1350px)  { 
+
+    main{
+        .presentation{
+            .who{
+                h1{
+                    font-size: 5rem;
+                }
+                .front-end{
+                    bottom: -7.8rem;
+                }
+            }
+        }
+        h2{
+            font-size: 6rem;
+        }
+        .projects{
+            .project{
+                .right{
+                    padding: 4rem;
+                    .project-counter{
+                        font-size: 4.5rem;
+                    }
+                    h4{
+                        font-size: 4.5rem;
+                    }
+                }
+    
+            }
+        }
+        .about{
+            padding: 15vh 0 15vh 0;
+            margin-bottom: 5vh;
+            .texts{
+                gap: 250px;
+                .text{
+                    .text-bottom{
+                        p{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+    footer {
+        .top{
+            .left, .right {
+                h5{
+            }
+            }
+            .left{
+                .footer-cta{
+                }
+            }
+            .right{
+                .footer-cta{
+                    transform: translate(0, -5vh);
+                }
+            }
+        }
+    }  
+}
+@media screen and (max-width: 1210px)  {
+    footer {
+        .top{
+            flex-direction: column;
+            gap: 0;
+            .left, .right {
+                margin-top: 6vh;
+                width: 71%;
+                h5{
+                    text-align: center;
+                    font-size: 4rem;
+            }
+            }
+            .left{
+                .footer-cta{
+                    transform: translate(0, 1vh);
+                }
+            }
+            .right{
+                .footer-cta{
+                    transform: translate(0, -7vh);
+                }
+            }
+        }
+    }  
+}
+
+@media screen and (max-width: 1000px)  {
+    main{
+        .presentation{
+            .who{
+                h1{
+                    font-size: 4rem;
+                }
+                .hi, .front-end{
+                    font-size: 1.5rem;
+                }
+                .front-end{
+                    bottom: -6rem;
+                }
+            }
+            .cta{
+                span{
+                    font-size: 1.1rem;
+                }
+                &:before{
+                    height: 48px;
+                    top: 8px;
+                }
+                img{
+                    height: 1.5rem;
+                }
+            }
+        }
+
+        .projects{
+            .project{
+                .right{
+                    padding: 2rem;
+                    .project-counter{
+                        font-size: 3.5rem;
+                    }
+                    h4{
+                        font-size: 3.5rem;
+                    }
+                    .click{
+                        p{
+                            font-size: .8rem;
+                            margin: 0 !important;
+                        }
+                        .view-project{
+                            .visit-arrow{
+                                height: 1rem;
+                            }
+                        }
+                        .visit-link{
+                            .visit-arrow{
+                                height: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .about{
+            .texts{
+                .text{
+                    width: 65%;
+                    h4{
+                        font-size: 2rem;
+                    }
+                    .text-bottom{
+                        p{
+                        }
+                    }
+                }
+            }
+        } 
+    } 
+}
+@media screen and (max-width: 850px)  {
+    main{
+        .presentation{
+            .who{
+                h1{
+                    font-size: 3.5rem;
+                }
+                .hi, .front-end{
+                    font-size: 1rem;
+                }
+                .hi{
+                    top: -1rem;
+                }
+                .front-end{
+                    bottom: -2.6rem;
+                }
+            }
+        }
+        .projects{
+            .project{
+                .left{
+                    transition: .3s;
+                    &:hover{
+                        width: 105%;
+                    }
+                }
+                .right{
+                    transition: .3s;
+                    width: 65%;
+                    .project-counter{
+                    }
+                    h4{
+                    }
+                    .click{
+                        p{
+                        }
+                        .view-project{
+                            .visit-arrow{
+                            }
+                        }
+                        .visit-link{
+                            .visit-arrow{
+                            }
+                        }
+                    }
+                }
+            }
+        }  
+    }
+}
+@media screen and (max-width: 800px)  {
+    main{
+        .presentation{
+            .who{
+                &:before{
+                    bottom: -14rem;
+                    left: -2rem;
+                }
+                &:after{
+                    bottom: -19.2rem;
+                    left: .2rem;
+                }
+                h1{
+                    font-size: 6rem;
+                    &:before{
+                        top: -12rem;
+                        right: -1rem;
+                    }
+                    &:after{
+                        top: -13.2rem;
+                        right: -.8rem;
+                    }
+                }
+                .hi, .front-end{
+                    font-size: 2rem;
+                }
+                .hi{
+                    top: -1.6rem;
+                }
+                .front-end{
+                    bottom: -7.6rem;
+                }
+            }
+            h3{
+                font-size: 2rem;
+                width: 70%;
+            }
+            
+            .cta{
+                span{
+                    font-size: 1.5rem;
+                }
+                &:before{
+                    scale: .9;
+                    top: -4px;
+                }
+                img{
+                }
+            }
+        }
+        .about{
+            scale: 1.3;
+            margin-top: 10vh;
+
+            .texts{
+                gap: 150px;
+                .text{
+                    .text-bottom{
+                        p{
+                            margin-top: 5rem;
+                        }
+                        .big-text{
+                            top: -5.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .projects{
+            .project{
+                .left{
+                    width: 32%;
+                }
+                .right{
+                    .project-counter{
+                        font-size: 6rem;
+                    }
+                    h4{
+                        font-size: 6rem;
+                    }
+                    .project-desc{
+                        font-size: 1.7rem;
+                    }
+                    .click{
+                        p{
+                            font-size: 1.5rem;
+                        }
+                        .view-project{
+                            .visit-arrow{
+                                height: 2rem;
+                            }
+                        }
+                        .visit-link{
+                            .visit-arrow{
+                                height: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer {
+            .top{
+                .left, .right {
+                    scale: 1.3;
+                    h5{
+                        font-size: 5rem;
+                    }
+                }
+                .left{
+                    .footer-cta{
+                    }
+                }
+                .right{
+                    margin-top: 11vh;
+                    .footer-cta{
+                    }
+                }
+            }
+            .bottom{
+                .footer-links{
+                    .page-links{
+                        a{
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .copyright-socials-links{
+                        a{
+                            height: 3rem;
+                            img{
+                                height: 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }  
+    }
+}
+
+@media screen and (max-width: 650px)  {
+
+    main{
+        .presentation{
+            .who{
+                h1{
+                    font-size: 4.5rem;
+                }
+                .hi, .front-end{
+                    font-size: 1.7rem;
+                }
+                .hi{
+                    top: -5rem;
+                }
+                .front-end{
+                    bottom: -10rem;
+                    right: 3rem;
+                }
+            }
+        }
+        .projects{
+            .project{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                .left{
+                    width: 100%;
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+                .right{
+                    width: 100%;
+                    grid-column: 1;
+                    grid-row: 1;
+                    background-color: $almost-white;
+                    background-image: url(https://grainy-gradients.vercel.app/noise.svg);
+                }
+            }
+        }
+        .about{
+            margin-top: 0;
+        }
+
+        footer {
+            .top{
+                .left, .right {
+                    width: 80%;
+                    h5{
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+    }
+}
