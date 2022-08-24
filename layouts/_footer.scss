@@ -98,7 +98,6 @@ footer{
                 align-items: center;
                 justify-content: space-evenly;
                 width: 80%;
-                min-width: 400px;
                 transform: translate(0, 2vh);
                 margin-top: 6vh;
 
@@ -139,6 +138,7 @@ footer{
                     color: $almost-white;
                     font-size: 1.2rem;
                     position: relative;
+                    text-align: center;
 
                     &:before{
                         content: '';

@@ -82,9 +82,7 @@ header nav .my-logo img {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-*:hover {
-  cursor: none !important;
+  cursor: none;
 }
 
 html {
@@ -182,7 +180,7 @@ main .presentation .who .hi {
 main .presentation .who h1 {
   font-family: "Noto Serif Display", serif;
   font-weight: 600;
-  font-size: 7rem;
+  font-size: 7vw;
   color: #110f0e;
   position: relative;
   text-align: center;
@@ -653,7 +651,6 @@ main .about .texts .text .text-bottom {
 main .about .texts .text .text-bottom p {
   font-size: 2rem;
   color: #110f0e;
-  min-width: 300px;
   font-weight: 400;
   margin-top: 2rem;
 }
@@ -702,7 +699,7 @@ main .about .texts .text .text-bottom .big-text {
   top: 1rem;
   width: 100%;
   height: 100%;
-  font-size: 12vw;
+  font-size: 14vw;
   white-space: nowrap;
   transform: translate(-90%);
   text-transform: uppercase;
@@ -922,7 +919,6 @@ footer .top .right .share-socials {
   align-items: center;
   justify-content: space-evenly;
   width: 80%;
-  min-width: 400px;
   transform: translate(0, 2vh);
   margin-top: 6vh;
 }
@@ -961,6 +957,7 @@ footer .bottom .footer-links .socials-links a {
   color: #FDF6F8;
   font-size: 1.2rem;
   position: relative;
+  text-align: center;
 }
 footer .bottom .footer-links .page-links a:before,
 footer .bottom .footer-links .socials-links a:before {
@@ -1046,17 +1043,17 @@ footer .bottom .banner:nth-child(3) {
   }
 }
 @media screen and (max-width: 1415px) {
-  footer .top .left h5, footer .top .right h5 {
+  main .presentation .who .front-end {
+    bottom: -7.8rem;
+  }
+  main footer .top .left h5, main footer .top .right h5 {
     font-size: 3.8rem;
   }
-  footer .top .right .footer-cta {
+  main footer .top .right .footer-cta {
     transform: translate(0, -4vh);
   }
 }
 @media screen and (max-width: 1350px) {
-  main .presentation .who h1 {
-    font-size: 5rem;
-  }
   main .presentation .who .front-end {
     bottom: -7.8rem;
   }
@@ -1108,9 +1105,6 @@ footer .bottom .banner:nth-child(3) {
   }
 }
 @media screen and (max-width: 1000px) {
-  main .presentation .who h1 {
-    font-size: 4rem;
-  }
   main .presentation .who .hi, main .presentation .who .front-end {
     font-size: 1.5rem;
   }
@@ -1152,11 +1146,14 @@ footer .bottom .banner:nth-child(3) {
   main .about .texts .text h4 {
     font-size: 2rem;
   }
+  main .about .texts .text .text-bottom .big-text {
+    top: 0;
+  }
+  main .about .texts .text .text-bottom .big-text:nth-child(1) {
+    top: 0;
+  }
 }
 @media screen and (max-width: 850px) {
-  main .presentation .who h1 {
-    font-size: 3.5rem;
-  }
   main .presentation .who .hi, main .presentation .who .front-end {
     font-size: 1rem;
   }
@@ -1178,6 +1175,11 @@ footer .bottom .banner:nth-child(3) {
   }
 }
 @media screen and (max-width: 800px) {
+  .cursor,
+.cursor-sonar {
+    display: none !important;
+  }
+
   main .presentation .who:before {
     bottom: -14rem;
     left: -2rem;
@@ -1185,9 +1187,6 @@ footer .bottom .banner:nth-child(3) {
   main .presentation .who:after {
     bottom: -19.2rem;
     left: 0.2rem;
-  }
-  main .presentation .who h1 {
-    font-size: 6rem;
   }
   main .presentation .who h1:before {
     top: -12rem;
@@ -1271,9 +1270,6 @@ footer .bottom .banner:nth-child(3) {
   }
 }
 @media screen and (max-width: 650px) {
-  main .presentation .who h1 {
-    font-size: 4.5rem;
-  }
   main .presentation .who .hi, main .presentation .who .front-end {
     font-size: 1.7rem;
   }
@@ -1301,14 +1297,45 @@ footer .bottom .banner:nth-child(3) {
     background-color: #FDF6F8;
     background-image: url(https://grainy-gradients.vercel.app/noise.svg);
   }
-  main .about {
-    margin-top: 0;
-  }
   main footer .top .left, main footer .top .right {
     width: 80%;
   }
   main footer .top .left h5, main footer .top .right h5 {
     font-size: 4rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .presentation .who h1 {
+    font-size: 3.3rem;
+  }
+  main .presentation h3 {
+    font-size: 1.4rem;
+  }
+  main .about .texts .text .text-bottom .big-text {
+    top: 0;
+  }
+  main .about .texts .text .text-bottom .big-text:nth-last-child(1) {
+    top: 0;
+  }
+  main footer .bottom .footer-links {
+    margin-top: 3rem;
+  }
+  main footer .bottom .footer-links .page-links {
+    justify-content: space-evenly;
+    gap: 0;
+  }
+  main footer .bottom .footer-links .separation {
+    width: 90%;
+    margin: 0.8rem auto;
+    height: 1.5px;
+  }
+  main footer .bottom .footer-links .copyright-socials-links {
+    flex-direction: column-reverse;
+    gap: 4rem;
+  }
+  main footer .bottom .footer-links .socials-links {
+    justify-content: space-evenly;
+    width: 80%;
   }
 }
 

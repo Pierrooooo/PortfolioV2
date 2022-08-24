@@ -22,20 +22,29 @@
     }  
 }
 @media screen and (max-width: 1415px)  {
-    footer {
-        .top{
-            .left, .right {
-                h5{
-                    font-size: 3.8rem;
-                }
-            }
-            .right{
-                .footer-cta{
-                    transform: translate(0, -4vh);
+    main{
+        .presentation{
+            .who{
+                .front-end{
+                    bottom: -7.8rem;
                 }
             }
         }
-    }  
+        footer {
+            .top{
+                .left, .right {
+                    h5{
+                        font-size: 3.8rem;
+                    }
+                }
+                .right{
+                    .footer-cta{
+                        transform: translate(0, -4vh);
+                    }
+                }
+            }
+        }  
+    }
 }
 
 
@@ -44,9 +53,6 @@
     main{
         .presentation{
             .who{
-                h1{
-                    font-size: 5rem;
-                }
                 .front-end{
                     bottom: -7.8rem;
                 }
@@ -133,9 +139,6 @@
     main{
         .presentation{
             .who{
-                h1{
-                    font-size: 4rem;
-                }
                 .hi, .front-end{
                     font-size: 1.5rem;
                 }
@@ -196,6 +199,14 @@
                     .text-bottom{
                         p{
                         }
+                        
+                        .big-text{
+                            top: 0;
+
+                            &:nth-child(1){
+                                top: 0;
+                            }
+                        }
                     }
                 }
             }
@@ -206,9 +217,6 @@
     main{
         .presentation{
             .who{
-                h1{
-                    font-size: 3.5rem;
-                }
                 .hi, .front-end{
                     font-size: 1rem;
                 }
@@ -253,6 +261,10 @@
     }
 }
 @media screen and (max-width: 800px)  {
+    .cursor,
+    .cursor-sonar{
+        display: none !important;
+    }
     main{
         .presentation{
             .who{
@@ -265,7 +277,6 @@
                     left: .2rem;
                 }
                 h1{
-                    font-size: 6rem;
                     &:before{
                         top: -12rem;
                         right: -1rem;
@@ -397,9 +408,6 @@
     main{
         .presentation{
             .who{
-                h1{
-                    font-size: 4.5rem;
-                }
                 .hi, .front-end{
                     font-size: 1.7rem;
                 }
@@ -431,9 +439,6 @@
                 }
             }
         }
-        .about{
-            margin-top: 0;
-        }
 
         footer {
             .top{
@@ -441,6 +446,70 @@
                     width: 80%;
                     h5{
                         font-size: 4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px)  {
+    main{
+        .presentation{
+            .who{
+                h1{
+                    font-size: 3.3rem;
+                }
+            }
+            h3{
+                font-size: 1.4rem;
+            }
+        }
+
+        .about {
+            .texts{
+                .text{
+                    .text-bottom{
+                        .big-text{
+                            top: 0;
+
+                            &:nth-last-child(1){
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer{
+            .top{
+                .right{
+                    .share-socials{
+                    }
+                }
+            }
+            .bottom{
+                .footer-links{
+                    margin-top: 3rem;
+                    .page-links{
+                        justify-content: space-evenly;
+                        gap: 0;
+                    }
+                }
+                .footer-links{
+                    .separation{
+                        width: 90%;
+                        margin: .8rem auto;
+                        height: 1.5px;
+                    }
+                    .copyright-socials-links{
+                        flex-direction: column-reverse;
+                        gap: 4rem;
+                    }
+                    .socials-links{
+                        justify-content: space-evenly;
+                        width: 80%;
                     }
                 }
             }
