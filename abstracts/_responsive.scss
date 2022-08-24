@@ -30,6 +30,16 @@
                 }
             }
         }
+        .projects{
+            .project-review{
+                .project-review-content{
+                    padding: 6rem;
+                    margin: 4rem;
+                    width: calc(100% - 8rem);
+                    min-height: calc(100vh - 8rem);
+                }
+            }
+        }
         footer {
             .top{
                 .left, .right {
@@ -332,6 +342,29 @@
             }
         }
         .projects{
+            .project-review{
+                .project-review-content{
+                    padding: 2rem;
+                    margin: 1rem;
+                    width: calc(100% - 2rem);
+                    min-height: calc(100vh - 2rem);
+                    
+                    h4{
+                        font-size: 5rem;
+                    }
+                    .stack{
+                        font-size: 2.2rem;
+                    }
+                    .project-intro,
+                    .project-text,
+                    .logo{
+                        font-size: 1.6rem;
+                    }
+                    .close-project-review{
+                        display: block;
+                    }
+                }
+            }
             .project{
                 .left{
                     width: 32%;
@@ -421,6 +454,21 @@
             }
         }
         .projects{
+            .project-review{
+                .project-review-content{
+                    h4{
+                        font-size: 3.5rem;
+                    }
+                    .stack{
+                        font-size: 1.8rem;
+                    }
+                    .project-intro,
+                    .project-text,
+                    .logo{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
             .project{
                 display: grid;
                 grid-template-columns: 1fr;
@@ -453,7 +501,7 @@
     }
 }
 
-@media screen and (max-width: 400px)  {
+@media screen and (max-width: 450px)  {
     main{
         .presentation{
             .who{
@@ -463,6 +511,24 @@
             }
             h3{
                 font-size: 1.4rem;
+            }
+        }
+
+        .projects{
+            .project-review{
+                .project-review-content{
+                    margin: .5rem;
+                    height: calc(100% - 1rem);
+                    width: calc(100% - 1rem);
+                    h4{
+                    }
+                    .stack{
+                    }
+                    .project-intro,
+                    .project-text,
+                    .logo{
+                    }
+                }
             }
         }
 
@@ -495,6 +561,17 @@
                     .page-links{
                         justify-content: space-evenly;
                         gap: 0;
+                        a{
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 1.5px;
+                                background-color: $red;
+                            }
+                        }
                     }
                 }
                 .footer-links{
@@ -510,6 +587,17 @@
                     .socials-links{
                         justify-content: space-evenly;
                         width: 80%;
+                        a{
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 1.5px;
+                                background-color: $red;
+                            }
+                        }
                     }
                 }
             }

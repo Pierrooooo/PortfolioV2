@@ -368,8 +368,6 @@ allTextBottom.forEach(el => {
     })
 })
 
-
-
 // Footer Appears
 
 const footerSection = document.querySelectorAll('.all-footer')
