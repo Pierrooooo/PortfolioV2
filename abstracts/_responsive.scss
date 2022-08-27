@@ -102,14 +102,6 @@
     }
     footer {
         .top{
-            .left, .right {
-                h5{
-            }
-            }
-            .left{
-                .footer-cta{
-                }
-            }
             .right{
                 .footer-cta{
                     transform: translate(0, -5vh);
@@ -206,13 +198,9 @@
                     h4{
                         font-size: 2rem;
                     }
-                    .text-bottom{
-                        p{
-                        }
-                        
+                    .text-bottom{                        
                         .big-text{
                             top: 0;
-
                             &:nth-child(1){
                                 top: 0;
                             }
@@ -249,22 +237,6 @@
                 .right{
                     transition: .3s;
                     width: 65%;
-                    .project-counter{
-                    }
-                    h4{
-                    }
-                    .click{
-                        p{
-                        }
-                        .view-project{
-                            .visit-arrow{
-                            }
-                        }
-                        .visit-link{
-                            .visit-arrow{
-                            }
-                        }
-                    }
                 }
             }
         }  
@@ -310,7 +282,6 @@
                 font-size: 2rem;
                 width: 70%;
             }
-            
             .cta{
                 span{
                     font-size: 1.5rem;
@@ -319,14 +290,11 @@
                     scale: .9;
                     top: -4px;
                 }
-                img{
-                }
             }
         }
         .about{
             scale: 1.3;
             margin-top: 10vh;
-
             .texts{
                 gap: 150px;
                 .text{
@@ -348,7 +316,6 @@
                     margin: 1rem;
                     width: calc(100% - 2rem);
                     min-height: calc(100vh - 2rem);
-                    
                     h4{
                         font-size: 5rem;
                     }
@@ -403,10 +370,6 @@
                     scale: 1.3;
                     h5{
                         font-size: 5rem;
-                    }
-                }
-                .left{
-                    .footer-cta{
                     }
                 }
                 .right{
@@ -520,14 +483,6 @@
                     margin: .5rem;
                     height: calc(100% - 1rem);
                     width: calc(100% - 1rem);
-                    h4{
-                    }
-                    .stack{
-                    }
-                    .project-intro,
-                    .project-text,
-                    .logo{
-                    }
                 }
             }
         }
@@ -538,7 +493,6 @@
                     .text-bottom{
                         .big-text{
                             top: 0;
-
                             &:nth-last-child(1){
                                 top: 0;
                             }
@@ -549,12 +503,6 @@
         }
 
         footer{
-            .top{
-                .right{
-                    .share-socials{
-                    }
-                }
-            }
             .bottom{
                 .footer-links{
                     margin-top: 3rem;
