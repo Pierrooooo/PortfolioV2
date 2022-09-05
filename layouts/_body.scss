@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     cursor: none;
-
 }
 html{
     font-size: 16px;
@@ -239,8 +238,7 @@ main{
             border-radius: 2rem;
             border: solid 2px $almost-black;
             position: relative;
-            // backdrop-filter: blur(10px);
-            // margin-bottom: 600px;
+            margin-bottom: 100px;
 
             span{
                 content: '';
@@ -474,7 +472,6 @@ main{
                     color: $almost-black;
                     width: 100%;
                     font-family: 'Noto Serif Display', serif;
-                    // text-align: center;
                     text-align: left;
                     transition: .3s;
                     opacity: 0;
@@ -504,7 +501,6 @@ main{
                         display: flex;
                         border-radius: 2rem;
                         flex-wrap: nowrap;
-                        // border: solid 1px $almost-black;
                         background-color: $almost-black;
                         padding: 1rem 1rem;
                         color: $almost-white;
@@ -577,7 +573,6 @@ main{
     .about{
         width: 100%;
         position: relative;
-        // background-color: $black;
         padding: 30vh 0 30vh 0;
         margin-bottom: 15vh;
         overflow: hidden;
@@ -733,7 +728,6 @@ main{
     background-color:  $almost-black;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    // transition: .005s; Create a laggy effect on his position
 }
 .cursor-2{
     height: 1.1rem;
