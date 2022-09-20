@@ -165,7 +165,7 @@ viewProjectButtons.forEach( el => {
                 </div>
                 <p class="project-intro">`+ el.dataset.intro +`<br>
                 <p class="project-text">`+ el.dataset.text +`</p>
-                <img class="logo" src="imgs/logos/Logo_8pierrecaillet.svg">
+                <img class="logo" src="imgs/icons/Logo_8pierrecaillet.svg">
                 <div class="close-project-review">
                     <span></span>
                     <span></span>
