@@ -217,7 +217,7 @@ window.addEventListener ('load', e => {
 
     TL.
     from(imgLoadAnim, 1, {
-        opacity: 0, 
+        opacity: 1, 
         ease: "power2.out",
         delay: .4
     })
