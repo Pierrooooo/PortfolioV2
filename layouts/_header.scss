@@ -4,7 +4,7 @@ header{
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 2rem);
     max-width: 1200px;
     padding: 1rem;
     margin: 1rem;
