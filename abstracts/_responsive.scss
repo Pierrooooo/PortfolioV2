@@ -249,6 +249,9 @@
     }
     main{
         .presentation{
+            h3{
+                text-align: center;
+            }
             .who{
                 &:before{
                     bottom: -14rem;
@@ -284,7 +287,20 @@
             }
             .cta{
                 span{
+                    color: $almost-white;
+                    font-weight: 400;
                     font-size: 1.5rem;
+                }
+
+                &:before{
+                    transform: rotate(0);
+                    animation: cta-before .3s .25s forwards;
+                    background: $almost-black;
+                    border: transparent;                  
+                }
+                img{
+                    transform: translate(0) rotate(-45deg) translate(0.5rem);
+                    opacity: 1;
                 }
                 &:before{
                     scale: .9;
@@ -403,6 +419,7 @@
 
     main{
         .presentation{
+            margin-top: 100px;
             .who{
                 .hi, .front-end{
                     font-size: 1.7rem;

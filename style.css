@@ -58,6 +58,12 @@ html {
   }
 }
 
+.main-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
 main {
   display: block;
 }
@@ -79,6 +85,7 @@ main .loading img {
   aspect-ratio: 1;
   min-width: 100px;
   transform-origin: bottom;
+  opacity: 0;
 }
 main .loading .loading-bar {
   height: 4px;
@@ -344,6 +351,7 @@ main .projects .project-review .project-review-content {
   background-color: #FDF6F8;
   color: #110f0e;
   border: solid 4px #110f0e;
+  overflow-y: scroll;
 }
 main .projects .project-review .project-review-content .logo {
   position: absolute;
@@ -1145,6 +1153,9 @@ footer .bottom .banner:nth-child(3) {
     display: none !important;
   }
 
+  main .presentation h3 {
+    text-align: center;
+  }
   main .presentation .who:before {
     bottom: -14rem;
     left: -2rem;
@@ -1175,7 +1186,19 @@ footer .bottom .banner:nth-child(3) {
     width: 70%;
   }
   main .presentation .cta span {
+    color: #FDF6F8;
+    font-weight: 400;
     font-size: 1.5rem;
+  }
+  main .presentation .cta:before {
+    transform: rotate(0);
+    animation: cta-before 0.3s 0.25s forwards;
+    background: #110f0e;
+    border: transparent;
+  }
+  main .presentation .cta img {
+    transform: translate(0) rotate(-45deg) translate(0.5rem);
+    opacity: 1;
   }
   main .presentation .cta:before {
     scale: 0.9;
@@ -1255,6 +1278,9 @@ main .projects .project-review .project-review-content .logo {
   }
 }
 @media screen and (max-width: 650px) {
+  main .presentation {
+    margin-top: 100px;
+  }
   main .presentation .who .hi, main .presentation .who .front-end {
     font-size: 1.7rem;
   }

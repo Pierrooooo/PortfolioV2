@@ -156,6 +156,7 @@ viewProjectButtons.forEach( el => {
     
     el.addEventListener('click', () => {
 
+
         projectReview.innerHTML=``
         projectReview.innerHTML=`
             <div class="project-review-content">
@@ -241,6 +242,9 @@ window.addEventListener ('load', e => {
     .to (loading, 0.6, {
         opacity: 0,
     },"-=.1")
+    .to(".main-container", {
+        overflow: "visible"
+    })
 
     TL.play()
 })
