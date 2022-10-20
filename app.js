@@ -1,16 +1,16 @@
-var firstDelay = 20
-var secondDelay = 35
-var thirdDelay = 45
-var ProjectReviewDelay = 3000
+const firstDelay = 20
+const secondDelay = 35
+const thirdDelay = 45
+const ProjectReviewDelay = 3000
 
-var cursor = document.getElementById('cursor')
-var cursorSonar = document.getElementById('cursor-sonar')
-var cursor2 = document.getElementById('cursor2')
-var cursor3 = document.getElementById('cursor3')
-var cursor4 = document.getElementById('cursor4')
-var closeCursor = document.getElementById('close-cursor')
-var closeCursor2 = document.getElementById('close-cursor2')
-var goScroll = document.querySelector('.go-scroll')
+const cursor = document.getElementById('cursor')
+const cursorSonar = document.getElementById('cursor-sonar')
+const cursor2 = document.getElementById('cursor2')
+const cursor3 = document.getElementById('cursor3')
+const cursor4 = document.getElementById('cursor4')
+const closeCursor = document.getElementById('close-cursor')
+const closeCursor2 = document.getElementById('close-cursor2')
+const goScroll = document.querySelector('.go-scroll')
 
 var x;  // random var for mouse stop sonar thing 
 
