@@ -1058,6 +1058,7 @@ footer .bottom .banner:nth-child(3) {
   footer .top {
     flex-direction: column;
     gap: 0;
+    margin-bottom: 48px;
   }
   footer .top .left, footer .top .right {
     margin-top: 6vh;
