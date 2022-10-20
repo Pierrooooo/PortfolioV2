@@ -15,7 +15,6 @@ header {
   max-width: 1200px;
   padding: 1rem;
   margin: 1rem;
-  border-radius: 0.4rem;
   top: 0;
   left: calc(50% - 600px);
 }
@@ -41,6 +40,7 @@ header nav .my-logo img {
   padding: 0;
   box-sizing: border-box;
   cursor: none;
+  outline: red 2px solid;
 }
 
 html {
@@ -1229,6 +1229,8 @@ footer .bottom .banner:nth-child(3) {
 main .projects .project-review .project-review-content .project-text,
 main .projects .project-review .project-review-content .logo {
     font-size: 1.6rem;
+    top: 3rem;
+    right: 3rem;
   }
   main .projects .project-review .project-review-content .close-project-review {
     display: block;
@@ -1342,6 +1344,7 @@ main .projects .project-review .project-review-content .logo {
   }
   main footer .bottom .footer-links {
     margin-top: 3rem;
+    width: 100%;
   }
   main footer .bottom .footer-links .page-links {
     justify-content: space-evenly;

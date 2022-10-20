@@ -334,6 +334,8 @@
                     .project-text,
                     .logo{
                         font-size: 1.6rem;
+                        top: 3rem;
+                        right: 3rem;
                     }
                     .close-project-review{
                         display: block;
@@ -515,6 +517,7 @@
             .bottom{
                 .footer-links{
                     margin-top: 3rem;
+                    width: 100%;
                     .page-links{
                         justify-content: space-evenly;
                         gap: 0;
