@@ -199,6 +199,20 @@ projectReview.addEventListener('mouseout', e =>{
     closeCursor2.style.display = 'none'
 })
 
+const sliderText = document.querySelector('footer .bottom .banner')
+const sliderTexts = document.querySelectorAll('footer .bottom .banner span')
+const sliderTextsArray = Array.from(sliderTexts)
+
+sliderText.addEventListener('mouseover', e =>{
+    sliderTextsArray.forEach(e =>{
+        e.style.animationPlayState = 'paused'
+    })
+})
+sliderText.addEventListener('mouseout', e =>{
+    sliderTextsArray.forEach(e =>{
+        e.style.animationPlayState = 'running'
+    })
+})
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GSAP ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
