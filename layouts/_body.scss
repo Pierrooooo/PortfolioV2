@@ -20,6 +20,11 @@ html{
 
     overflow-x: hidden;
 }
+.main-container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
 main{
     display: block;
 
@@ -331,6 +336,7 @@ main{
                 background-color: $almost-white;
                 color: $almost-black;
                 border: solid 4px $almost-black;
+                overflow-y: scroll;
                 
                 .logo{
                     position: absolute;
