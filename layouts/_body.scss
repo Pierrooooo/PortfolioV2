@@ -44,7 +44,7 @@ main{
             aspect-ratio: 1;
             min-width: 100px;
             transform-origin: bottom;
-            opacity: 0;
+            opacity: 1;
         }
 
         .loading-bar{
@@ -54,7 +54,7 @@ main{
             min-width: 280px;
             background-color: $almost-black;
             transform-origin: left;
-            transform: scaleY(1);
+            transform: scaleX(1);
         }
     }
 
@@ -388,7 +388,7 @@ main{
                         content: '';
                         position: absolute;
                         bottom: -.5rem;
-                        width: 80%;
+                        width: 88%;
                         height: 1.5px;
                         background-color: $red;
                         transition: .3s;
@@ -503,9 +503,11 @@ main{
                     transition: .3s;
                     opacity: 0;
 
-                    a{
+                    a,
+                    button{
                         text-decoration: none;
                         display: flex;
+                        align-items: center;
                         border-radius: 2rem;
                         flex-wrap: nowrap;
                         background-color: $almost-black;
@@ -532,6 +534,8 @@ main{
                             width: 0;
                             opacity: 0;
                             white-space: nowrap;
+                            font-family: 'Chillax-Variable';
+                            font-size: 16px;
                         }
     
                         &:hover p{

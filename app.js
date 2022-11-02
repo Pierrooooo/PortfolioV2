@@ -224,36 +224,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const imgLoadAnim = document.querySelector('.loading img')
 const loadingBar = document.querySelector('.loading-bar')
-const loading = document.querySelector('.loading')
+
+const loadingImgBar = []
+loadingImgBar[0] = imgLoadAnim
+loadingImgBar[1] = loadingBar
 
 window.addEventListener ('load', e => {
 
-    const TL = gsap.timeline ({paused : true})
+    const TL = gsap.timeline({paused : true})
 
-    TL.
-    from(imgLoadAnim, 1, {
-        opacity: 1, 
-        ease: "power2.out",
-        delay: .4
-    })
-    .from(loadingBar, 1, {
-        opacity: 0,
-        ease: "power2.out"
-    }, "-=.8")
+    TL
     .from (loadingBar, 1, {
         scaleX: 0,
         scaleY: 1,
-
-    }, "-=.9")
-    .to (imgLoadAnim, 0.3, {
-        opacity: 0,
-        // scaleY: 0,
-        delay: 1.2
     })
-    .to (loadingBar, 0.3, {
-        scaleY: 0,
-    },"-=.3")
-    .to (loading, 0.6, {
+    .to (imgLoadAnim, 0.3, {
+        opacity: 0
+    })
+    .staggerTo(loadingImgBar, .5, {
+        opacity: 0, 
+        ease:"power4.out"
+    })
+    .to ('.loading', 0.6, {
         opacity: 0,
     },"-=.1")
     .to(".main-container", {
@@ -262,6 +254,7 @@ window.addEventListener ('load', e => {
 
     TL.play()
 })
+
 
 // Presentation Desappears
 
