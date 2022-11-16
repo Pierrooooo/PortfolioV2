@@ -84,7 +84,7 @@ main .loading img {
   aspect-ratio: 1;
   min-width: 100px;
   transform-origin: bottom;
-  opacity: 0;
+  opacity: 1;
 }
 main .loading .loading-bar {
   height: 4px;
@@ -93,7 +93,7 @@ main .loading .loading-bar {
   min-width: 280px;
   background-color: #110f0e;
   transform-origin: left;
-  transform: scaleY(1);
+  transform: scaleX(1);
 }
 main .presentation {
   display: flex;
@@ -398,7 +398,7 @@ main .projects .project-review .project-review-content .stack:before {
   content: "";
   position: absolute;
   bottom: -0.5rem;
-  width: 80%;
+  width: 88%;
   height: 1.5px;
   background-color: #CD2658;
   transition: 0.3s;
@@ -495,9 +495,11 @@ main .projects .project .right .click {
   transition: 0.3s;
   opacity: 0;
 }
-main .projects .project .right .click a {
+main .projects .project .right .click a,
+main .projects .project .right .click button {
   text-decoration: none;
   display: flex;
+  align-items: center;
   border-radius: 2rem;
   flex-wrap: nowrap;
   background-color: #110f0e;
@@ -522,6 +524,8 @@ main .projects .project .right .click .view-project p {
   width: 0;
   opacity: 0;
   white-space: nowrap;
+  font-family: "Chillax-Variable";
+  font-size: 16px;
 }
 main .projects .project .right .click .view-project:hover p {
   width: 100px;
@@ -555,6 +559,9 @@ main .projects .project .right .click .visit-link:hover p {
 }
 main .projects .project .right .click .visit-link:hover .visit-arrow {
   transform: rotate(-35deg);
+}
+main .projects .project2 .left {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/48/Paris_75005_Grande_Galerie_de_l%27Evolution_20070804.jpg");
 }
 main .about {
   width: 100%;
@@ -900,7 +907,7 @@ footer .bottom {
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  gap: 4rem;
+  gap: 2rem;
 }
 footer .bottom .footer-links {
   display: flex;
