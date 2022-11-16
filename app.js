@@ -15,33 +15,33 @@ const goScroll = document.querySelector('.go-scroll')
 var x;  // random var for mouse stop sonar thing 
 
 document.addEventListener('mousemove', (event) => {
-    cursor.style.left = event.screenX + 'px'
-    cursor.style.top = event.screenY - 100 + 'px'
-    cursorSonar.style.left = event.pageX + 'px'
-    cursorSonar.style.top = event.screenY - 100 + 'px'
+    cursor.style.left = event.clientX + 'px'
+    cursor.style.top = event.clientY + 'px'
+    cursorSonar.style.left = event.clientX + 'px'
+    cursorSonar.style.top = event.clientY + 'px'
     cursorSonar.style.display = 'none'
 
     setTimeout(function() {
-        cursor2.style.left = event.screenX + 'px'
-        cursor2.style.top = event.screenY - 100 + 'px'
+    cursor2.style.left = event.clientX + 'px'
+    cursor2.style.top = event.clientY + 'px'
     }, firstDelay);
 
     setTimeout(function() {
-        cursor3.style.left = event.screenX + 'px'
-        cursor3.style.top = event.screenY - 100 + 'px'
+    cursor3.style.left = event.clientX + 'px'
+    cursor3.style.top = event.clientY + 'px'
     }, secondDelay);
 
     setTimeout(function() {
-        cursor4.style.left = event.screenX + 'px'
-        cursor4.style.top = event.screenY - 100 + 'px'
+    cursor4.style.left = event.clientX + 'px'
+    cursor4.style.top = event.clientY + 'px'
     }, thirdDelay);
 
     setTimeout(function() {
         closeCursor.style.left = event.pageX + 'px'
-        closeCursor.style.top = event.screenY - 100 + 'px'
+        closeCursor.style.top = event.screenY + 'px'
         closeCursor.style.transform = 'rotate' + event.screenY / 100 * 3.6 + 'deg'
         closeCursor2.style.left = event.pageX + 'px'
-        closeCursor2.style.top = event.screenY - 100 + 'px'
+        closeCursor2.style.top = event.screenY + 'px'
     }, secondDelay);
 
     // Mouse Stop Mooving  Sonar Thing
