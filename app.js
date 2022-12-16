@@ -1,3 +1,9 @@
+
+// var before = window.getComputedStyle(document.querySelector('h1'), ":before").getPropertyValue('color')
+// console.log(before)
+// console.log(document.querySelector('h1:before'))
+
+
 const firstDelay = 20
 const secondDelay = 35
 const thirdDelay = 45
