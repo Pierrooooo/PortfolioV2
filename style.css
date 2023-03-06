@@ -103,7 +103,6 @@ main .presentation {
   gap: 4rem;
   min-height: calc(100vh - 200px);
   width: 100%;
-  max-width: 2000px;
   position: relative;
   margin-top: 20px;
 }
@@ -1055,7 +1054,6 @@ footer .bottom .banner:nth-child(3) {
   main .about .texts {
     gap: 250px;
   }
-
   footer .top .right .footer-cta {
     transform: translate(0, -5vh);
   }
@@ -1153,10 +1151,9 @@ footer .bottom .banner:nth-child(3) {
 }
 @media screen and (max-width: 800px) {
   .cursor,
-.cursor-sonar {
+  .cursor-sonar {
     display: none !important;
   }
-
   main .presentation h3 {
     text-align: center;
   }
@@ -1233,8 +1230,8 @@ footer .bottom .banner:nth-child(3) {
     font-size: 2.2rem;
   }
   main .projects .project-review .project-review-content .project-intro,
-main .projects .project-review .project-review-content .project-text,
-main .projects .project-review .project-review-content .logo {
+  main .projects .project-review .project-review-content .project-text,
+  main .projects .project-review .project-review-content .logo {
     font-size: 1.6rem;
     top: 3rem;
     right: 3rem;
@@ -1302,9 +1299,7 @@ main .projects .project-review .project-review-content .logo {
   main .projects .project-review .project-review-content .stack {
     font-size: 1.8rem;
   }
-  main .projects .project-review .project-review-content .project-intro,
-main .projects .project-review .project-review-content .project-text,
-main .projects .project-review .project-review-content .logo {
+  main .projects .project-review .project-review-content .logo {
     font-size: 1.2rem;
   }
   main .projects .project {
