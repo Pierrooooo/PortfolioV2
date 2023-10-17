@@ -240,9 +240,8 @@ window.addEventListener ('load', e => {
     const TL = gsap.timeline({paused : true})
 
     TL
-    .from (loadingBar, 1, {
-        scaleX: 0,
-        scaleY: 1,
+    .to (loadingBar, 1, {
+        scaleX: 1,
     })
     .to (imgLoadAnim, 0.3, {
         opacity: 0

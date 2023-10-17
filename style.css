@@ -93,7 +93,7 @@ main .loading .loading-bar {
   min-width: 280px;
   background-color: #110f0e;
   transform-origin: left;
-  transform: scaleX(1);
+  transform: scaleX(0);
 }
 main .presentation {
   display: flex;
