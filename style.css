@@ -477,7 +477,7 @@ main .projects .project .right .project-counter {
   opacity: 0;
 }
 main .projects .project .right h4 {
-  font-size: 6rem;
+  font-size: 5rem;
   color: #110f0e;
   width: 100%;
   font-family: "Noto Serif Display", serif;
@@ -570,6 +570,9 @@ main .projects .project .right .click .visit-link:hover .visit-arrow {
 }
 main .projects .project2 .left {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/48/Paris_75005_Grande_Galerie_de_l%27Evolution_20070804.jpg");
+}
+main .projects .project3 .left {
+  background-image: url("./imgs/ioapi.webp");
 }
 main .about {
   width: 100%;
@@ -1255,7 +1258,7 @@ footer .bottom .banner:nth-child(3) {
     font-size: 6rem;
   }
   main .projects .project .right h4 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   main .projects .project .right .project-desc {
     font-size: 1.7rem;

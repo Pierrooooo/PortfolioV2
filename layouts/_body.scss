@@ -482,7 +482,7 @@ main{
                 }
 
                 h4{
-                    font-size: 6rem;
+                    font-size: 5rem;
                     color: $almost-black;
                     width: 100%;
                     font-family: 'Noto Serif Display', serif;
@@ -591,6 +591,11 @@ main{
             .left{
                 background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/48/Paris_75005_Grande_Galerie_de_l%27Evolution_20070804.jpg');
                 }
+        }
+        .project3{
+            .left{
+                background-image: url(../imgs/ioapi.webp);
+            }
         }
     }
     .about{
