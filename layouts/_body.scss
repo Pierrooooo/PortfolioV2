@@ -263,9 +263,18 @@ main{
                 animation-play-state: paused;
             }
         }
+        .outdated {
+            background-color: $black;
+            color: $white;
+            width: 100%;
+            position: absolute;
+            bottom: 100px;
+            left: 0;
+            text-align: center;
+        }
     }
 
-    h2{
+    h2:not(.outdated){
         font-family: 'Noto Serif Display', serif;
         font-size: 8rem;
         font-weight: 300;

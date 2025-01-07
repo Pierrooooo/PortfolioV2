@@ -323,7 +323,7 @@ gsap.to(thirdProject, {
 
 // Section Titles like Projects or About
 
-const allH2 = document.querySelectorAll('h2')
+const allH2 = document.querySelectorAll('h2:not(.outdated)')
 allH2.forEach(el => {
 
     gsap.to(el, {

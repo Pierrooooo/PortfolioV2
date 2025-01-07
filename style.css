@@ -282,7 +282,16 @@ main .presentation .go-scroll span {
 main .presentation .go-scroll .paused {
   animation-play-state: paused;
 }
-main h2 {
+main .presentation .outdated {
+    background-color: #030202;
+    color: #FDF6F8;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    text-align: center;
+}
+main h2:not(.outdated) {
   font-family: "Noto Serif Display", serif;
   font-size: 8rem;
   font-weight: 300;
@@ -293,7 +302,7 @@ main h2 {
   position: relative;
   width: fit-content;
 }
-main h2:before {
+main h2:not(.outdated):before {
   content: attr(data-h2);
   position: absolute;
   top: 0;
@@ -305,10 +314,10 @@ main h2:before {
   color: #110f0e;
   transition: 0.4s;
 }
-main h2:hover:before {
+main h2:not(.outdated):hover:before {
   transform: translate(0, 90%) rotate(25deg);
 }
-main h2:after {
+main h2:not(.outdated):after {
   content: attr(data-h2);
   position: absolute;
   top: 0;
@@ -320,7 +329,7 @@ main h2:after {
   color: #110f0e;
   transition: 0.4s;
 }
-main h2:hover:after {
+main h2:not(.outdated):hover:after {
   transform: translate(0, 0) rotate(0);
 }
 main .projects {
